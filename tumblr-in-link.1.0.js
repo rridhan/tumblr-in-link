@@ -81,9 +81,37 @@
             for(var i=0; i<tags.length; i++){
                 req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&start=0&type='+config.type+'&tagged='+escape(tags[i]), function(data) {
                     $j(data.posts).each(function(i, post) {
+                    switch(type)  {
+                    	case (photo):
                         titles.push(post['photo-caption']);
                         links.push(post['url-with-slug']);
-				images.push(post['photo-url-100']);                        
+				        images.push(post['photo-url-100']); 
+				        break;
+				        case (text):
+                        titles.push(post['regular-title']);
+                        links.push(post['url-with-slug']);
+				        break;
+				        case (quote):
+				        titles.push(post['quote-text']);
+                        links.push(post['url-with-slug']);
+				        break;
+				        case (link):
+                        titles.push(post['link-text']);
+                        links.push(post['url-with-slug']);
+				        break;
+				        case (chat):
+                        titles.push(post['conversation-title']);
+                        links.push(post['url-with-slug']);
+				        break;
+				        case (video):
+                        titles.push(post['video-caption']);
+                        links.push(post['url-with-slug']);
+				        images.push(post['photo-url-100']); 
+				        break;
+				        case (audio): 
+				        titles.push(post['audio-caption']);
+                        links.push(post['url-with-slug']);
+				         }
                     });
                     
                 }).complete(getList);
