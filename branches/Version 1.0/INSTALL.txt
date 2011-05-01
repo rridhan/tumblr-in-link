@@ -1,0 +1,36 @@
+================================
+Tumblr In-Link - Install
+================================
+
+In order to install this widget, you need to be able to access the HTML of your theme. If you don’t have enough HTML knowledge, or you don’t want to mess up your theme, please don’t go any further.
+
+Otherwise here are the instructions. Access your Theme, and find the following lines of code. These can go anywhere you want within the {block:Posts} … {/blockPosts} tags.
+
+{block:Permalink}
+	{block:HasTags}
+		<!— Start Tumblr In-Link widget —>
+		<script src="http://tumblr-in-link.googlecode.com/svn/trunk/js/tumblr-in-link.1.0.js?num=5&len=60&css=dark&title=Some Related Posts&tags={block:Tags}{Tag},{/block:Tags}" type="text/javascript"></script>
+		<!— End Tumblr In-Link widget —> 
+	{/block:HasTags} 
+{/block:Permalink} 	
+Wrapping the widget code into the {block:HasTags} … {/blockHasTags} tags will ensure the widget is displayed only for posts that have tags.
+
+Also, you will need to add the following code to the <head> section of your theme:
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+
+This will ensure that the jQuery is called correctly. If you already have a jQuery call (many themes already use it) you may not need this step.
+
+Options
+
+You can implement many different options by simply using the JavaScript variables appended in the Widget string. How? Simply change the values that are available in this string:
+
+"http://tumblr-in-link.googlecode.com/svn/trunk/js/tumblr-in-link.1.0.js?num=5&len=60&css=dark&title=Some Related Posts&tags={block:Tags}{Tag},{/block:Tags}"
+Here the various options:
+
+num indicate the number of items you would like to see displayed. If undefined standard is 8. If you want to display images, I suggest you use a value between 3 and 5, depending on your template width. For example num=5.
+len indicates the maximum length of your text links. Default is 60. This means that if a link description is longer, the widget will cut it to 60 characters and add three dots at the end [“…”]. For example len=40.
+css indicates the CSS file to be used for display. There four possible variants which I will explain later in this post. For example: css=dark.
+title indicated the Title of your “Tumblr In-Link Widget”.  Default is “Related Posts:”. This way you can choose also your own language. For example: title=Some Related Posts.
+type add a specific type if you want to display only related posts of a specific type. Valid values are all Tumblr post options, i.e. text, quote, audio, photo, video, link, answer. For example: type=photo.
+Remember to connect all options with an “&” and leave the tags option at the end, the way it is written.
