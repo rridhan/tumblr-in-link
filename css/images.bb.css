@@ -24,8 +24,8 @@
  *
 */
 
-.tumblrinlink {clear: both; border-top: 1px dashed #ddd; padding: 25px 30px 10px 30px; color: #626566;}
-.tumblrinlink h2 { font-size: 20px; display: inline-block; padding-bottom: 20px;}
+#tumblrinlink {clear: both; border-top: 1px dashed #ddd; padding: 25px 30px 10px 30px; color: #626566;}
+#tumblrinlink h2 { font-size: 20px; display: inline-block; padding-bottom: 20px;}
 li.inlink-item {display: block; float: left;margin-right: 5px; margin-bottom: 5px; height: 180px; padding 4px; border: 1px solid #CCC; padding: 4px; width: 110px; text-align: center; position:relative;}
 li.inlink-item img {max-height:150px;width:100px; vertical-align:top;}
 li.inlink-item p {display: block;position: absolute;bottom: 0; margin-bottom: 4px; font-size: 0.8em; text-align: left; line-height: 1.1em;}
