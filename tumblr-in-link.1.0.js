@@ -60,7 +60,7 @@
     break;
     case ('dark'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://static.tumblr.com/jmczp4p/lOKlkinx4/dark.css" media="screen" />');
+      'href="http://static.tumblr.com/jmczp4p/iQklkiqnh/dark.css" media="screen" />');
     break;
   }
   
@@ -104,7 +104,8 @@
                         /*titles.push(text.replace(/(<[^<>]*>)/g, ""));*/
                         titles.push(text);
                         links.push(post['url-with-slug']); 
-                        images.push(image); 
+                        images.push(image);
+                        type.push(post['type'])
                     });
                     
                 }).complete(getList);
@@ -119,7 +120,7 @@
                 if(links[i]!=document.location&&!html.match(regex)){
                     if(config.num--<=0) return;
                 
-                    var item='<li class="inlink-item"><a class="inlink-link" href="'+links[i]+'"><img src="'+images[i]+'"><p>'+titles[i]+'</p></a></li>';
+                    var item='<li class="inlink-item" id="'+type[i]+'"><a class="inlink-link" href="'+links[i]+'"><img src="'+images[i]+'"><p>'+titles[i]+'</p></a></li>';
                     $j("#inlink-list").append(item);
                 }
             }
