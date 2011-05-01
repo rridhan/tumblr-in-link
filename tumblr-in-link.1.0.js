@@ -100,7 +100,7 @@
                         else if(post.type=='video') image+=['video-caption'];
                         else if(post.type=='audio') image+=['audio-caption'];
                         else if(post.type=='answer') image+=['question'];
-                        titles.push(text);
+                        titles.push(text.replace(/(<[^<>]*>)/g, ""));
                         links.push(post['url-with-slug']); 
                         images.push(image); 
                     });
