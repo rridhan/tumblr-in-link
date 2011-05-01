@@ -79,7 +79,7 @@
         function getRelated() {
             var req;
             for(var i=0; i<tags.length; i++){
-                req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&start=0&type='config.type'&tagged='+escape(tags[i]), function(data) {
+                req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&start=0&type='+config.type+'&tagged='+escape(tags[i]), function(data) {
                     $j(data.posts).each(function(i, post) {
                         titles.push(post['photo-caption']);
                         links.push(post['url-with-slug']);
