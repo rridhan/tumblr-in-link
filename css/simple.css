@@ -32,6 +32,9 @@
 		padding:25px 30px 10px 30px; 
 		color:#626566;
 			}
+#tumblrinlink a {
+		color:#000;
+			}
 #tumblrinlink h2 {
 		display:inline-block; 
 		padding-bottom:20px;
