@@ -53,7 +53,7 @@
     switch(config.css) {
     case ('simple'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/simple.css" media="screen" />');
+      'href="http://static.tumblr.com/jmczp4p/491lkisar/simple.css" media="screen" />');
     break;
     case ('light'):
       document.write('<link rel="stylesheet" type="text/css" ' +
