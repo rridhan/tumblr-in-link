@@ -46,7 +46,7 @@ li.inlink-item {
 		float:left;
 		margin-right:5px; 
 		margin-bottom:5px; 
-		height:180px;
+		min-height:150px;
 		border:1px solid #CCC; 
 		padding:4px; 
 		width:110px; 
@@ -63,7 +63,7 @@ li.inlink-item#photo img {
 		vertical-align:top;
 			}
 li.inlink-item p {
-		height:25px;
+		height:35px;
 		display:block;
 		position:absolute;
 		bottom:0;
