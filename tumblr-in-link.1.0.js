@@ -52,15 +52,15 @@
     switch(config.css) {
     case ('simple'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://rive.rs/stylesheets/tumblr_tag_clouds/default.css" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/simple.png" />');
     break;
     case ('light'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://rive.rs/stylesheets/tumblr_tag_clouds/flickr.css" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/images.lb.png" />');
     break;
     case ('dark'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://rive.rs/stylesheets/tumblr_tag_clouds/flickr.css" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/images.bb.png" />');
     break;
   }
   
