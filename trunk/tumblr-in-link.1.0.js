@@ -60,7 +60,7 @@
     break;
     case ('dark'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/dark.css" media="screen" />');
+      'href="http://static.tumblr.com/jmczp4p/l2jlkindf/dark.css" media="screen" />');
     break;
   }
   
