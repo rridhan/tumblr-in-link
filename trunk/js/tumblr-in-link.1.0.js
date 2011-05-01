@@ -74,7 +74,7 @@
             '<div id="inlink-loading">Loading Tumblr In Links...</div>' +
             '<div id="inlink-title"></div>'+
             '<ul id="inlink-list"></ul>' +
-            '<div id="inlink-logo"><a href="http://tumblr-in-link.googlecode.com" title="Tumblr In-Link Widget"><img src="http://tumblr-in-link.googlecode.com/svn/trunk/img/in-link-sm.png" alt="Tumblr In-Link"></a></div>' +
+            '<div id="inlink-logo"><a href="http://tech.gayspirit.me/in-link" title="In-Link Widget"><img src="http://tumblr-in-link.googlecode.com/svn/trunk/img/in-link-sm.png" alt="Tumblr In-Link"></a></div>' +
         '</div>'
     );
         
