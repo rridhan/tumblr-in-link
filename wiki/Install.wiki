@@ -1,11 +1,11 @@
-#summary How to install Tumblr In-Link
+#summary How to install In-Link
 #labels Phase-Deploy,Featured,Phase-Support
 
 <wiki:toc max_depth="1" />
 
 = Introduction =
 
-Welcome to Tumblr In-Link, a widget that helps you display a “Related Posts” area beneath your individual posts, with a very easy to use yet customizable format.
+Welcome to *In-Link*, a widget that helps you display a “Related Posts” area beneath your individual posts, with a very easy to use yet customizable format.
 
 Tumblr is a great platform, but it doesn’t have (yet) the functionality to display related items on your page, something very useful for the usability of your Tumblr-Blog.
 
@@ -26,9 +26,9 @@ Otherwise here are the instructions. Access your Theme, and find the following l
 
 `{block:Permalink}
 	{block:HasTags}
-		<!— Start Tumblr In-Link widget —>
+		<!— Start In-Link widget —>
 		<script src="http://tumblr-in-link.googlecode.com/svn/trunk/js/tumblr-in-link.1.0.js?num=5&len=60&css=dark&title=Some Related Posts&tags={block:Tags}{Tag},{/block:Tags}" type="text/javascript"></script>
-		<!— End Tumblr In-Link widget —> 
+		<!— End In-Link widget —> 
 	{/block:HasTags} 
 {/block:Permalink}`
  	
@@ -51,6 +51,6 @@ Here the various options:
   * *num* indicate the number of items you would like to see displayed. If undefined standard is 8. If you want to display images, I suggest you use a value between 3 and 5, depending on your template width. For example *num=5*.
   * *len* indicates the maximum length of your text links. Default is 60. This means that if a link description is longer, the widget will cut it to 60 characters and add three dots at the end [“…”]. For example *len=40*.
   * *css* indicates the CSS file to be used for display. There four possible variants which I will explain later in this post. For example: css=dark.
-  * *title* indicated the Title of your “Tumblr In-Link Widget”.  Default is “Related Posts:”. This way you can choose also your own language. For example: title=Some Related Posts.
+  * *title* indicated the Title of your “In-Link Widget”.  Default is “Related Posts:”. This way you can choose also your own language. For example: title=Some Related Posts.
   * *type* add a specific type if you want to display only related posts of a specific type. Valid values are all Tumblr post options, i.e. text, quote, audio, photo, video, link, answer. For example: type=photo.
   * *Remember to connect* all options with an “&” and leave the tags option at the end, the way it is written.
