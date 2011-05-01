@@ -9,7 +9,7 @@ Please read the Install.txt file for instructions.
 
 More infos available also on projects pages:
 
-http://tech.gayspirit.me/tumblr-in-link
+http://tech.gayspirit.me/in-link
 http://tumblr-in-link.googlecode.com
 
 
