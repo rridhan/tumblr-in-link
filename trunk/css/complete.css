@@ -39,7 +39,7 @@
 #tumblrinlink a {
 		color:#000;
 			}
-ul.inlink-list {
+ul#inlink-list {
 			list-style-type: none;
 			padding:0;
 			margin:0;

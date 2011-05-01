@@ -37,7 +37,7 @@
 #tumblrinlink h2 {
 		padding-bottom:20px;
 			}
-ul.inlink-list {
+ul#inlink-list {
 		list-style-type: square;
 			}			
 li.inlink-item img {
