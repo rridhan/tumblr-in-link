@@ -1,5 +1,5 @@
 ================================
-Tumblr In-Link - Install
+In-Link - Install
 ================================
 
 In order to install this widget, you need to be able to access the HTML of your theme. If you don’t have enough HTML knowledge, or you don’t want to mess up your theme, please don’t go any further.
