@@ -63,6 +63,7 @@ li.inlink-item#photo img {
 		vertical-align:top;
 			}
 li.inlink-item p {
+		height:22px;
 		display:block;
 		position:absolute;
 		bottom:0;
@@ -70,6 +71,7 @@ li.inlink-item p {
 		font-size:0.8em; 
 		text-align:left; 
 		line-height:1.1em;
+		overflow:hidden;
 			}
 #inlink-list {
 		min-height:195px;
