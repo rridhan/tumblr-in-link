@@ -37,39 +37,8 @@
 		padding-bottom:20px;
 			}
 ul.inlink-list {
-			list-style-type: none;
-			padding:0;
-			margin:0;
+			list-style-type: square;
 			}			
-li.inlink-item {
-		padding-left:22px;
-		line-height:22px;
-			}
-li.inlink-item#regular {
-		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/icon_text.png) 0 0 no-repeat;)
-			}
-li.inlink-item#link {
-		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/icon_link.png) 0 0 no-repeat;)
-			}
-li.inlink-item#quote {
-		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/icon_quote.png) 0 0 no-repeat;)
-			}
-li.inlink-item#conversation {
-		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/icon_chat.png) 0 0 no-repeat;)
-			}
-li.inlink-item#video {
-		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/icon_video.png) 0 0 no-repeat;)
-			}
-li.inlink-item#audio {
-		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/icon_audio.png) 0 0 no-repeat;)
-			}
-li.inlink-item#answer {
-		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/icon_answer.png) 0 0 no-repeat;)
-			}
-li.inlink-item#photo {
-		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/icon_photo.png) 0 0 no-repeat;)
-			}
-			
 li.inlink-item img {
 		display:none;
 			}
