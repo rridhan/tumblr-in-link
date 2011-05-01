@@ -30,6 +30,7 @@
     var links = [];
     var images = [];
     var items = [];
+    var types = [];
     var $j = jQuery.noConflict()
 
     var scripts = document.getElementsByTagName('script');
@@ -105,7 +106,7 @@
                         titles.push(text);
                         links.push(post['url-with-slug']); 
                         images.push(image);
-                        type.push(post['type'])
+                        types.push(post['type'])
                     });
                     
                 }).complete(getList);
