@@ -59,7 +59,7 @@ li.inlink-item img {
 li.inlink-item#photo img {
 		display:block;
 		max-height:150px;
-		width:100px; 
+		overflow:hidden;
 		vertical-align:top;
 			}
 li.inlink-item p {
