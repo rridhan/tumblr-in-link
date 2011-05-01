@@ -53,7 +53,11 @@
     switch(config.css) {
     case ('simple'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://static.tumblr.com/jmczp4p/491lkisar/simple.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/simple.css" media="screen" />');
+    break;
+    case ('complete'):
+      document.write('<link rel="stylesheet" type="text/css" ' +
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/complete.css" media="screen" />');
     break;
     case ('light'):
       document.write('<link rel="stylesheet" type="text/css" ' +
@@ -61,7 +65,7 @@
     break;
     case ('dark'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://static.tumblr.com/jmczp4p/iQklkiqnh/dark.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/dark.css" media="screen" />');
     break;
   }
   
