@@ -1,0 +1,45 @@
+/*
+ *   Tumblr In-Link Widget Code version 1.0
+ *	 Empty Style Sheet - for your own customisations
+ *	 File Name: dark.css
+ *   
+ *   Copyright (c) 2011, Gayspirit - http://tech.gayspirit.me
+ *   Based on the Work by Eduardo Miranda - http://code.google.com/p/relposts/
+ *
+ *   Changelog:
+ *   1.0 - Initial Release		2011/05/01
+ * 
+ *   All rights reserved.
+ *
+ *   Tumblr In-Link is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   Tumblr In-Link is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with Tumblr In-Link.  If not, see <http://www.gnu.org/licenses/>.
+ *
+*/
+#tumblrinlink {	} 		/* Main div Container */
+#tumblrinlink h2 { }	/* Title */
+#tumblrinlink a { }		/* Link Style */			
+li.inlink-item { }		/* List Item (each content is rendered as li) */
+li.inlink-item img {
+		display:none; 	/* if you don't want to display images use this */
+			}
+li.inlink-item p { }	/* The actual title for the link */
+#inlink-list { }		/* The ul container */
+/* Each li has its own selector for individual styling depending
+* on post type. */
+li.inlink-item#regular { }
+li.inlink-item#link { }
+li.inlink-item#quote { }
+li.inlink-item#conversation { }
+li.inlink-item#video { }
+li.inlink-item#audio { }
+li.inlink-item#answer { }
