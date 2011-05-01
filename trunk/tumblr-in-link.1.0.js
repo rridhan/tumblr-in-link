@@ -90,7 +90,8 @@
                         else if(post.type=='video') text+=post['video-caption'];
                         else if(post.type=='audio') text+=post['audio-caption'];
                         else if(post.type=='answer') text+=post['question'];
-                        /*if(text.length>config.len){ text=text.slice(0,config.len); text+='...';}*/
+                        text=text.replace(/(<[^<>]*>)/g, "");
+                        if(text.length>config.len){ text=text.slice(0,config.len); text+='...';}
                         var image ='';
                         if(post.type=='photo') image+=post['photo-url-100'];
                         else if(post.type=='link') image+=['link-text'];
@@ -100,7 +101,8 @@
                         else if(post.type=='video') image+=['video-caption'];
                         else if(post.type=='audio') image+=['audio-caption'];
                         else if(post.type=='answer') image+=['question'];
-                        titles.push(text.replace(/(<[^<>]*>)/g, ""));
+                        /*titles.push(text.replace(/(<[^<>]*>)/g, ""));*/
+                        titles.push(text);
                         links.push(post['url-with-slug']); 
                         images.push(image); 
                     });
