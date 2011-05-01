@@ -81,37 +81,28 @@
             for(var i=0; i<tags.length; i++){
                 req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&start=0&type='+config.type+'&tagged='+escape(tags[i]), function(data) {
                     $j(data.posts).each(function(i, post) {
-                    switch(type)  {
-                    	case (photo):
-                        titles.push(post['photo-caption']);
-                        links.push(post['url-with-slug']);
-				        images.push(post['photo-url-100']); 
-				        break;
-				        case (text):
-                        titles.push(post['regular-title']);
-                        links.push(post['url-with-slug']);
-				        break;
-				        case (quote):
-				        titles.push(post['quote-text']);
-                        links.push(post['url-with-slug']);
-				        break;
-				        case (link):
-                        titles.push(post['link-text']);
-                        links.push(post['url-with-slug']);
-				        break;
-				        case (chat):
-                        titles.push(post['conversation-title']);
-                        links.push(post['url-with-slug']);
-				        break;
-				        case (video):
-                        titles.push(post['video-caption']);
-                        links.push(post['url-with-slug']);
-				        images.push(post['photo-url-100']); 
-				        break;
-				        case (audio): 
-				        titles.push(post['audio-caption']);
-                        links.push(post['url-with-slug']);
-				         }
+                        var text='';
+                        if(post.type=='regular') text+=post['regular-title'];
+                        else if(post.type=='link') text+=post['link-text'];
+                        else if(post.type=='quote') text+=post['quote-text'];
+                        else if(post.type=='photo') text+=post['photo-caption'];
+                        else if(post.type=='conversation') text+=post['conversation-title'];
+                        else if(post.type=='video') text+=post['video-caption'];
+                        else if(post.type=='audio') text+=post['audio-caption'];
+                        else if(post.type=='answer') text+=post['question'];
+                        if(text.length>config.len){ text=text.slice(0,config.len); text+='...';}
+                        var image ='';
+                        if(post.type=='photo') image+=post['photo-url-100'];
+                        else if(post.type=='link') image+=['link-text'];
+                        else if(post.type=='quote') image+=['quote-text'];
+                        else if(post.type=='photo') image+=['photo-caption'];
+                        else if(post.type=='conversation') image+=['conversation-title'];
+                        else if(post.type=='video') image+=['video-caption'];
+                        else if(post.type=='audio') image+=['audio-caption'];
+                        else if(post.type=='answer') image+=['question'];
+                        titles.push(text.replace(/(<[^<>]*>)/g, ""));
+                        links.push(post['url-with-slug']); 
+                        images.push(image); 
                     });
                     
                 }).complete(getList);
