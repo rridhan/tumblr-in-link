@@ -1,5 +1,5 @@
 ================================
-Tumblr In-Link
+In-Link
 ================================
 
 Is a widget to allow the delivery of related contents
