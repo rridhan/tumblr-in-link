@@ -30,17 +30,15 @@
 		clear:both;
 		border-top:1px dashed #ddd; 
 		padding:25px 30px 10px 30px; 
-		color:#626566;
 			}
 #tumblrinlink a {
 		color:#000;
 			}
 #tumblrinlink h2 {
-		display:inline-block; 
 		padding-bottom:20px;
 			}
 ul.inlink-list {
-			list-style-type: square;
+		list-style-type: square;
 			}			
 li.inlink-item img {
 		display:none;
