@@ -52,15 +52,15 @@
     switch(config.css) {
     case ('simple'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/simple.css" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/simple.css" media="screen" />');
     break;
     case ('light'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/images.lb.css" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/images.lb.css" media="screen" />');
     break;
     case ('dark'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/images.bb.css" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/images.bb.css" media="screen" />');
     break;
   }
   
