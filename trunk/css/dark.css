@@ -39,7 +39,7 @@
 			}
 			
 #tumblrinlink a {
-		color:000;
+		color:#000;
 			}			
 li.inlink-item {
 		display:block; 
@@ -57,6 +57,7 @@ li.inlink-item img {
 		display:none;
 			}
 li.inlink-item#photo img {
+		display:block;
 		max-height:150px;
 		width:100px; 
 		vertical-align:top;

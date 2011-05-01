@@ -38,7 +38,7 @@
 		padding-bottom:20px;
 			}
 #tumblrinlink a {
-		color:fff;
+		color:#fff;
 			}			
 li.inlink-item {
 		display:block; 
@@ -57,8 +57,9 @@ li.inlink-item img {
 			}
 li.inlink-item#photo img {
 		max-height:150px;
-		width:100px; 
 		vertical-align:top;
+		overflow:hidden;
+		display:block;
 			}
 li.inlink-item p {
 		display:block;
