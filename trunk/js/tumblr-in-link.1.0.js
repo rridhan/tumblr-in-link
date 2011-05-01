@@ -80,7 +80,7 @@
         function getRelated() {
             var req;
             for(var i=0; i<tags.length; i++){
-                req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&start=0&type='+config.type+'&tagged='+escape(tags[i]), function(data) {
+                req=$j.getJSON(url_base+'api/read/json?callback=?&filter=text&num='+config.num+'&start=0&type='+config.type+'&tagged='+escape(tags[i]), function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
@@ -91,7 +91,6 @@
                         else if(post.type=='video') text+=post['video-caption'];
                         else if(post.type=='audio') text+=post['audio-caption'];
                         else if(post.type=='answer') text+=post['question'];
-                        text=text.replace(/(<[^<>]*>)/g, "");
                         if(text.length>config.len){ text=text.slice(0,config.len); text+='...';}
                         var image ='';
                         if(post.type=='photo') image+=post['photo-url-100'];
@@ -102,7 +101,6 @@
                         else if(post.type=='video') image+=['video-caption'];
                         else if(post.type=='audio') image+=['audio-caption'];
                         else if(post.type=='answer') image+=['question'];
-                        /*titles.push(text.replace(/(<[^<>]*>)/g, ""));*/
                         titles.push(text);
                         links.push(post['url-with-slug']); 
                         images.push(image);
