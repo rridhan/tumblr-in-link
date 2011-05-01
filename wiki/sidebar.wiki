@@ -2,5 +2,5 @@
 #labels Phase-Deploy
 
   * [Install Installation Instructions]
-    * [CSSStyles Styling]
+    * [CSSStyle Styling]
     * [CSSEmpty Empty Style]
