@@ -117,7 +117,7 @@
                 if(links[i]!=document.location&&!html.match(regex)){
                     if(config.num--<=0) return;
                 
-                    var item='<li class="inlink-item"><a class="inlink-link" href="'+links[i]+'"><img src="'+images[i]+'">'+titles[i]+'</a></li>';
+                    var item='<li class="inlink-item"><a class="inlink-link" href="'+links[i]+'"><img src="'+images[i]+'"><p>'+titles[i]+'</p></a></li>';
                     $j("#inlink-list").append(item);
                 }
             }
