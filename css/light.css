@@ -1,7 +1,7 @@
 /*
  *   Tumblr In-Link Widget Code version 1.0
- *	 Dark Coloured Style Sheet for Light Background.
- *	 File Name: dark.css
+ *	 Light Coloured Style Sheet for Dark Background.
+ *	 File Name: light.css
  *   
  *   Copyright (c) 2011, Gayspirit - http://tech.gayspirit.me
  *   Based on the Work by Eduardo Miranda - http://code.google.com/p/relposts/
@@ -37,9 +37,6 @@
 		display:inline-block; 
 		padding-bottom:20px;
 			}
-#tumblrinlink a {
-		color:000;
-			}			
 li.inlink-item {
 		display:block; 
 		float:left;
