@@ -60,7 +60,7 @@
     break;
     case ('dark'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://static.tumblr.com/jmczp4p/l2jlkindf/dark.css" media="screen" />');
+      'href="http://static.tumblr.com/jmczp4p/1Silkinq7/dark.css" media="screen" />');
     break;
   }
   
