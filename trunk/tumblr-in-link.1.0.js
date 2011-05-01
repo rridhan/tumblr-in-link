@@ -114,12 +114,12 @@
                 var regex = new RegExp('('+links[i]+')');
                 var html = $j("#inlink-list").html();
 
-                /*if(links[i]!=document.location&&!html.match(regex)){
-                    if(config.num--<=0) return;*/
+                if(links[i]!=document.location&&!html.match(regex)){
+                    if(config.num--<=0) return;
                 
                     var item='<li class="inlink-item"><a class="inlink-link" href="'+links[i]+'"><img src="'+images[i]+'">'+titles[i]+'</a></li>';
                     $j("#inlink-list").append(item);
-                /*}*/
+                }
             }
             $j("#inlink-title").html('<h2>'+config.title+'</h2>');
             $j("#inlink-loading").html('');
