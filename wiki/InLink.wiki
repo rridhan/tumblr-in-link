@@ -1,0 +1,6 @@
+#summary In-Link short format
+#labels Phase-QA
+
+*InLink* is used instead of *In-Link* in certain coding examples where the dash "-" is not allowed.
+
+This is the case, for example, of the [embeddingTumblrTheme Tumblr Theme Options set-up]
