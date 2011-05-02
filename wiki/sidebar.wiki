@@ -4,3 +4,6 @@
   * [Install Installation Instructions]
     * [CSSStyle Styling]
     * [CSSEmpty Empty Style]
+
+  * [Advanced Advanced Usage]
+    * [embeddingTumblrTheme Embedding In-Link into a Tumblr Theme]
