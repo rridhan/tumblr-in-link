@@ -50,8 +50,8 @@ li.inlink-item {
 		border:1px solid #CCC; 
 		padding:4px; 
 		width:110px; 
-		text-align:center; 
 		position:relative;
+		overflow:hidden;
 			}
 li.inlink-item img {
 		display:none;
@@ -59,7 +59,6 @@ li.inlink-item img {
 li.inlink-item#photo img {
 		max-height:150px;
 		vertical-align:top;
-		overflow:hidden;
 		display:block;
 			}
 li.inlink-item p {
