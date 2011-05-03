@@ -24,21 +24,20 @@ In order to install this widget, you need to be able to access the HTML of your 
 
 Otherwise here are the instructions. Access your Theme, and find the following lines of code. These can go anywhere you want within the `{block:Posts} … {/blockPosts}` tags.
 
-`{block:Permalink}
+{{{
+{block:Permalink}
 	{block:HasTags}
 		<!— Start In-Link widget —>
+                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 		<script src="http://tumblr-in-link.googlecode.com/svn/trunk/js/tumblr-in-link.1.0.js?num=5&len=60&css=dark&title=Some Related Posts&tags={block:Tags}{Tag},{/block:Tags}" type="text/javascript"></script>
 		<!— End In-Link widget —> 
 	{/block:HasTags} 
-{/block:Permalink}`
+{/block:Permalink}
+}}}
  	
 Wrapping the widget code into the `{block:HasTags} … {/blockHasTags}` tags will ensure the widget is displayed only for posts that have tags.
 
-Also, you will need to add the following code to the <head> section of your theme:
-
-`<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>`
-
-This will ensure that the jQuery is called correctly. If you already have a jQuery call (many themes already use it) you may not need this step.
+*Please note*: if you’ve already the jQuery code used somewhere else in the theme, you may not need to add the reference to that code. But this plugin requires at least jQuery version 1.5.0.
 
 = Options =
 
