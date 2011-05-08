@@ -120,7 +120,9 @@ jQuery.noConflict();
 		e(window).load(function() {
     			e('#slider').nivoSlider({
     				controlNavThumbs:true,
-    				controlNavThumbsFromRel:true
+    				controlNavThumbsFromRel:true,
+    				prevText: '',
+        			nextText: '',
     			});
 				e("#accordionGiftLelo").msAccordion({vertical:true, event:'mouseover'});
     			e("#top-wrapper").show("slow");
