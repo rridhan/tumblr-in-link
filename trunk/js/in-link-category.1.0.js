@@ -32,7 +32,6 @@
     var items = [];
     var starts = [];
     var types = [];
-    var tags = [];
     var $j = jQuery.noConflict()
 
     var scripts = document.getElementsByTagName('script');
@@ -81,7 +80,7 @@
         '</div>'
     );
         
-
+    var tags = config.tags.slice(0,-1).split(',');
 
     $j(document).ready(function() {
         function getRelated() {
