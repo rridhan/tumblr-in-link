@@ -85,7 +85,7 @@
         function getRelated() {
             var req;
             for(var i=0; i<tags.length; i++){
-                req=$j.getJSON(url_base+'api/read/json?callback=?&filter=text&num='+config.num+'&start='+config.start+'&type='+config.type+'&tagged='+escape(tags[i]), function(data) {
+                req=$j.getJSON(url_base+'api/read/json?callback=?&filter=text&num=50&start=10&type=photo&tagged=black and white', function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
