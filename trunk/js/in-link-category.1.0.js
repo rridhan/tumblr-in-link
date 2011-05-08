@@ -30,6 +30,7 @@
     var links = [];
     var images = [];
     var items = [];
+
     var types = [];
     var $j = jQuery.noConflict()
 
@@ -79,13 +80,12 @@
         '</div>'
     );
         
-    var tags = config.tags.slice(0,-1).split(',');
 
     $j(document).ready(function() {
         function getRelated() {
             var req;
             for(var i=0; i<tags.length; i++){
-                req=$j.getJSON(url_base+'api/read/json?callback=?&filter=text&num=50&start=10&type=photo&tagged='+escape(tags[i]), function(data) {
+                req=$j.getJSON(url_base+'api/read/json?callback=?&filter=text&num='+config.num+'&start='+config.start+'&type='+config.type+'&tagged='+config.tags, function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
