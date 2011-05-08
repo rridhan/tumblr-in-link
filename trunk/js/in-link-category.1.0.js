@@ -72,11 +72,12 @@
   }
   
       document.write(
-        '<div id="tumblrinlinkcat">' +
+        '<div id="tumblrinlinkcat" style="display:none">' +
             '<div id="inlinkcat-loading">Loading Tumblr In Links...</div>' +
             '<div id="inlinkcat-title"></div>'+
             '<ul id="inlinkcat-list"></ul>' +
             '<div id="inlinkcat-logo"><a href="http://tech.gayspirit.me/in-link" title="In-Link Category Widget"><img src="http://tumblr-in-link.googlecode.com/svn/trunk/img/in-link-sm.png" alt="Tumblr In-Link"></a></div>' +
+        	'<p><small>Here are featured a maximum of 50 images for this gallery. Explore further to see more!</small></p>' +
         '</div>'
     );
         
@@ -126,6 +127,7 @@
 	        }
             $j("#inlinkcat-title").html('<h2>'+config.title+'</h2>');
             $j("#inlinkcat-loading").html('');
+            $j("#tumblrinlinkcat").show('slow');
         }
         getRelated();
         
