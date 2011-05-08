@@ -32,6 +32,7 @@
     var items = [];
     var starts = [];
     var types = [];
+    var tags = [];
     var $j = jQuery.noConflict()
 
     var scripts = document.getElementsByTagName('script');
@@ -80,7 +81,7 @@
         '</div>'
     );
         
-    var tags = config.tags.slice(0,-1).split(',');
+
 
     $j(document).ready(function() {
         function getRelated() {
@@ -121,9 +122,10 @@
             for(var i=0; i<titles.length; i++){
                 var regex = new RegExp('('+links[i]+')');
                 var html = $j("#inlinkcat-list").html();
+                           
                 var item='<li class="inlinkcat-item" id="'+types[i]+'"><a class="inlinkcat-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'"><p>'+titles[i]+'</p></a></li>';
                  $j("#inlinkcat-list").append(item);
-	            }
+	        }
             $j("#inlinkcat-title").html('<h2>'+config.title+'</h2>');
             $j("#inlinkcat-loading").html('');
         }
