@@ -30,7 +30,6 @@
     var links = [];
     var images = [];
     var items = [];
-    var starts = [];
     var types = [];
     var $j = jQuery.noConflict()
 
