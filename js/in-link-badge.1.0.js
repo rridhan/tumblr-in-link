@@ -117,12 +117,11 @@
                         types.push(post['type'])
                     });
                     
-                }).complete(getList);
+                }).complete(getLista);
             }
             
         }
-        function getList(){
-        for(var i=0; i<url.length; i++){
+        function getLista(){
             for(var i=0; i<titles.length; i++){
                 var regex = new RegExp('('+links[i]+')');
                 var html = $j("#inlink-list").html();
@@ -135,7 +134,6 @@
             }
             $j("#inlink-title").html('<h2>'+config.title+'</h2>');
             $j("#inlink-loading").html('');
-        }
         }
         getBadge();
         
