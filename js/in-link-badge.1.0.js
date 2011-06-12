@@ -70,9 +70,9 @@
       document.write('<link rel="stylesheet" type="text/css" ' +
       'href="http://tumblr-in-link.googlecode.com/svn/trunk/css-badge/light.css" media="screen" />');
     break;
-    case ('dark'):
+    case ('vertical'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css-badge/dark.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css-badge/vertical.css" media="screen" />');
     break;
   }
   
