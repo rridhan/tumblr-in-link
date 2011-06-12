@@ -99,4 +99,8 @@ li.inlinkbadge-item#audio {
 li.inlinkbadge-item#answer {
 		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/bgs.png) 600px 0 repeat-x;)
 			}
+#inlinkbadge-logo{
+		margin-top:5px;
+		margin:auto;
+			}
 			
