@@ -79,8 +79,8 @@
       document.write(
         '<div class="inlinkbadge" id="badge-'+config.url+'">' +
             '<div id="inlinkbadge-loading">Loading Tumblr In Link Badge...</div>' +
-            '<div class="inlinkbadge-title" id="title-'+config.url+'"></div>'+
-            '<ul class="inlinkbadge-list" id="list-'+config.url+'"></ul>' +
+            '<div id="inlinkbadge-title"></div>'+
+            '<ul class="" id="list-'+config.url+'"></ul>' +
             '<div id="inlinkbadge-logo"><a href="http://tech.gayspirit.me/in-link" title="In-Link Badge Widget"><img src="http://tumblr-in-link.googlecode.com/svn/trunk/img/in-link-sm.png" alt="Tumblr In-Link"></a></div>' +
         '</div>'
     );
@@ -124,15 +124,15 @@
         function getLista(){
             for(var i=0; i<titles.length; i++){
                 var regex = new RegExp('('+links[i]+')');
-                var html = $j('"#list-'+config.url+'"').html();
+                var html = $j('"#inlinkbadge-list-'+config.url+'"').html();
 
 				{ if(config.num--<=0) return;
                 
                     var item='<li class="inlinkbadge-item" id="'+types[i]+'"><a class="inlinkbadge-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'"><p>'+titles[i]+'</p></a></li>';
-                    $j('"#list-'+config.url+'"').append(item);
+                    $j('"#inlinkbadge-list-'+config.url+'"').append(item);
                 }
             }
-            $j('"#title-'+config.url+'"').html('<h2>'+config.title+'</h2>');
+            $j("#inlinkbadge-title").html('<h2>'+config.title+'</h2>');
             $j("#inlinkbadge-loading").html('');
         }
         getBadge();
