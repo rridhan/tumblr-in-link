@@ -31,9 +31,6 @@
     var images = [];
     var items = [];
     var types = [];
-    var totals = [];
-    var ttitle = [];
-    var tdescr = [];
     var $j = jQuery.noConflict()
 
     var scripts = document.getElementsByTagName('script');
@@ -53,10 +50,7 @@
     if(typeof(config.title)=='undefined'){ config.title='Latest Posts:'; }
     if(typeof(config.type)=='undefined'){ config.type=''; }
     if(typeof(config.total)=='undefined'){ config.total=10; }
-    
-    //var url = config.url.slice(0).split(',');
-    var totals = config.total;
-        
+      
     var url_base = ('http://' + config.url + '/');
     
     switch(config.css) {
@@ -92,7 +86,6 @@
         function getBadge() {
             var req;
             {req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&filter=text', function(data) {
-          
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
@@ -118,11 +111,6 @@
                         images.push(image);
                         types.push(post['type'])
                     });
-                                		$j(data.tumblelog).each(function(i, tumblelog) {
-            			ttitle.push(tumblelog['title']); 
-                        tdescr.push(tumblelog['description']);
-                        if(tdescr.length>config.len){ tdescr=tdescr.slice(0,config.len); text+='...';}
-                    });
                     
                 }).complete(getLista);
             }
@@ -139,7 +127,7 @@
                     $j("#inlinkbadge-list").append(item);
                 }
             }
-            $j("#inlinkbadge-title").html('<h2>'+config.title+' '+ttitle[i]+'</h2><p>'+tdescr[i]+'</p>');
+            $j("#inlinkbadge-title").html('<h2>'+config.title+'</h2>');
             $j("#inlinkbadge-loading").html('');
         }
         getBadge();
