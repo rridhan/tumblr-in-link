@@ -55,7 +55,7 @@
     //var url = config.url.slice(0).split(',');
     var totals = config.total;
         
-    //var url_base = ('http://' + config.url + '/');
+    var url_base = ('http://' + config.url + '/');
     
     switch(config.css) {
     case ('simple'):
@@ -90,7 +90,7 @@
         function getBadge() {
             var req;
             {
-                req=$j.getJSON('http://'+escape(url[i])+'/api/read/json?callback=?&num='+config.num+'&filter=text', function(data) {
+                req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&filter=text', function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
