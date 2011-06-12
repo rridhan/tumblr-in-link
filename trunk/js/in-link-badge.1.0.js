@@ -122,12 +122,12 @@
             
         }
         function getList(){
+        for(var i=0; i<url.length; i++){
             for(var i=0; i<titles.length; i++){
                 var regex = new RegExp('('+links[i]+')');
                 var html = $j("#inlink-list").html();
 
-				{
-                     if(config.total--<=0) return;
+				{ if(config.num--<=0) return;
                 
                     var item='<li class="inlink-item" id="'+types[i]+'"><a class="inlink-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'"><p>'+titles[i]+'</p></a></li>';
                     $j("#inlink-list").append(item);
@@ -135,6 +135,7 @@
             }
             $j("#inlink-title").html('<h2>'+config.title+'</h2>');
             $j("#inlink-loading").html('');
+        }
         }
         getBadge();
         
