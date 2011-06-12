@@ -32,6 +32,8 @@
     var items = [];
     var types = [];
     var totals = [];
+    var ttitle = [];
+    var tdescr = [];
     var $j = jQuery.noConflict()
 
     var scripts = document.getElementsByTagName('script');
