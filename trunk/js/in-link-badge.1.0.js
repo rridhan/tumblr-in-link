@@ -1,15 +1,15 @@
 /*
- *   In-Link Widget Code version 1.0
+ *   In-Link Badge Widget Code version 1.0
  *   
  *   Copyright (c) 2011, Gayspirit - http://tech.gayspirit.me/in-link
- *   Based on the Work by Eduardo Miranda - http://code.google.com/p/relposts/
+ *   Originally Based on the Work by Eduardo Miranda - http://code.google.com/p/relposts/
  *
  *   Changelog:
  *   1.0 - Initial Release
  * 
  *   All rights reserved.
  *
- *   In-Link is free software: you can redistribute it and/or modify
+ *   In-Link Badge is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
  *   the Free Software Foundation, either version 3 of the License, or
  *   (at your option) any later version.
