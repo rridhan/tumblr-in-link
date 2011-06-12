@@ -37,18 +37,21 @@
     var this_script = scripts[scripts.length - 1];
     var params = this_script.src.replace(/^[^\?]+\??/,'').split('&');   
  
-    var url_base = ((typeof(config.url) == 'undefined') ? ('http://' + document.domain + '/') : ('http://' + config.url + '/'));
+
 
 	    for(var i=0; i<params.length; i++) {
         var tmp = params[i].split("=");
         config[tmp[0]] = unescape(tmp[1]);
     }
-
+    
+    if(typeof(config.url) == 'undefined'){ error(2); return; }
     if(typeof(config.tags)=='undefined'){ error(0); return; }
     if(typeof(config.num)=='undefined'){ config.num=8; }
     if(typeof(config.len)=='undefined'){ config.len=60; }
     if(typeof(config.title)=='undefined'){ config.title='Latest Posts:'; }
     if(typeof(config.type)=='undefined'){ config.type=''; }
+    
+    var url_base = ('http://' + config.url + '/'));
     
     switch(config.css) {
     case ('simple'):
@@ -139,6 +142,7 @@
         switch(e){
             case 0: msg+='no tags defined'; break;
             case 1: msg+='tumblr API problem'; break;
+            case 2: msg+='URL not defined'; break;
         }
         $j("#inlink-loading").html(msg);
     }
