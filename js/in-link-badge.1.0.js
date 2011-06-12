@@ -92,7 +92,7 @@
         function getBadge() {
             var req;
             {req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&filter=text', function(data) {
-            		$j(data.tumblelog).each(function(i, tumblelog) {
+            		$j(data.tumblelog).(function(i, tumblelog) {
             			ttitle.push(tumblelog['title']); 
                         tdescr.push(tumblelog['description']);
                         if(tdescr.length>config.len){ tdescr=tdescr.slice(0,config.len); text+='...';}
