@@ -87,7 +87,7 @@
         function getBadge() {
             var req;
             for(var i=0; i<url.length; i++){
-                req=$j.getJSON('http://'+escape(url[i])+'/api/read/json?callback=?&num='+config.num+'&start=0&type='+config.type+'&filter=text', function(data) {
+                req=$j.getJSON('http://'+escape(url[i])+'/api/read/json?callback=?&num='+config.num+'&filter=text', function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
