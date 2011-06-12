@@ -80,7 +80,6 @@
         '</div>'
     );
         
-    var tags = config.tags.slice(0,-1).split(',');
 
     $j(document).ready(function() {
         function getRelated() {
