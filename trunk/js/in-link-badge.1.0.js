@@ -50,7 +50,9 @@
     if(typeof(config.title)=='undefined'){ config.title='Latest Posts:'; }
     if(typeof(config.type)=='undefined'){ config.type=''; }
     
-    var url_base = ('http://' + config.url + '/');
+    var url = config.url.slice(0,-1).split(',');
+    
+    //var url_base = ('http://' + config.url + '/');
     
     switch(config.css) {
     case ('simple'):
@@ -84,8 +86,8 @@
     $j(document).ready(function() {
         function getBadge() {
             var req;
-            {
-                req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&start=0&type='+config.type+'&filter=text', function(data) {
+            for(var i=0; i<url.length; i++){
+                req=$j.getJSON('http://'+escape(url[i])+'/api/read/json?callback=?&num='+config.num+'&start=0&type='+config.type+'&filter=text', function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
