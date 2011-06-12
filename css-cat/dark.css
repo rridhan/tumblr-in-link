@@ -39,7 +39,7 @@
 			}
 			
 #tumblrinlinkcat a {
-		color:#000;
+		color:#333;
 			}			
 li.inlinkcat-item {
 		display:block; 
@@ -47,7 +47,7 @@ li.inlinkcat-item {
 		margin-right:5px; 
 		margin-bottom:5px; 
 		height:180px;
-		border:1px solid #CCC; 
+		border:1px solid #AAA; 
 		padding:4px; 
 		width:110px; 
 		position:relative;
@@ -60,6 +60,7 @@ li.inlinkcat-item#photo img {
 		max-height:150px;
 		vertical-align:top;
 		display:block;
+		margin:auto;
 			}
 li.inlinkcat-item p {
 		height:30px;
