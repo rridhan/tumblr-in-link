@@ -82,9 +82,9 @@
         
 
     $j(document).ready(function() {
-        function getRelated() {
+        function getBadge() {
             var req;
-            for(var i=0; i<url_base.length; i++){
+            for(var i=0; i<i++; i++){
                 req=$j.getJSON(url_base+'api/read/json?callback=?&filter=text&num='+config.num+'&start=0&type='+config.type+ function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
@@ -131,7 +131,7 @@
             $j("#inlink-title").html('<h2>'+config.title+'</h2>');
             $j("#inlink-loading").html('');
         }
-        getRelated();
+        getBadge();
         
     });
 
