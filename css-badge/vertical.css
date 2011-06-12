@@ -26,20 +26,20 @@
  *
 */
 
-#inlinkbadge {
+.inlinkbadge {
 		clear:both;
 		border-top:1px dashed #ddd; 
 		padding:25px 30px 10px 30px; 
 		color:#626566;
 		width:200px;
 			}
-#inlinkbadge h2 {
+.inlinkbadge h2 {
 		font-size:20px;
 		display:inline-block; 
 		padding-bottom:20px;
 			}
 			
-#inlinkbadge a {
+.inlinkbadge a {
 		color:#333;
 			}			
 li.inlinkbadge-item {
