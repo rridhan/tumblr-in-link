@@ -124,16 +124,16 @@
         function getLista(){
             for(var i=0; i<titles.length; i++){
                 var regex = new RegExp('('+links[i]+')');
-                var html = $j('"#inlink-list-'+config.url+'"').html();
+                var html = $j('"#inlinkbadge-list-'+config.url+'"').html();
 
 				{ if(config.num--<=0) return;
                 
-                    var item='<li class="inlink-item" id="'+types[i]+'"><a class="inlink-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'"><p>'+titles[i]+'</p></a></li>';
-                    $j("#inlink-list").append(item);
+                    var item='<li class="inlinkbadge-item" id="'+types[i]+'"><a class="inlinkbadge-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'"><p>'+titles[i]+'</p></a></li>';
+                    $j("#inlinkbadge-list").append(item);
                 }
             }
-            $j("#inlink-title").html('<h2>'+config.title+'</h2>');
-            $j("#inlink-loading").html('');
+            $j("#inlinkbadge-title").html('<h2>'+config.title+'</h2>');
+            $j("#inlinkbadge-loading").html('');
         }
         getBadge();
         
@@ -145,6 +145,6 @@
             case 0: msg+='no url defined'; break;
             case 1: msg+='tumblr API problem'; break;
         }
-        $j("#inlink-loading").html(msg);
+        $j("#inlinkbadge-loading").html(msg);
     }
 })();
