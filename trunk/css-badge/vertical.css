@@ -76,6 +76,7 @@ li.inlinkbadge-item p {
 #inlinkbadge-list {
 		min-height:195px;
 		padding:5px;
+		margin:auto;
 			}
 li.inlinkbadge-item#regular {
 		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/bgs.png) 0 0 repeat-x;)
