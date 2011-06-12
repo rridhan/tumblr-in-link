@@ -28,7 +28,7 @@
 
 .inlinkbadge {
 		clear:both;
-		border-top:1px dashed #ddd; 
+		border:1px dashed #ddd; 
 		color:#626566;
 		width:200px;
 			}
