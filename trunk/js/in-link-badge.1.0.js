@@ -60,28 +60,28 @@
     switch(config.css) {
     case ('simple'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/simple.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css-badge/simple.css" media="screen" />');
     break;
     case ('complete'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/complete.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css-badge/complete.css" media="screen" />');
     break;
     case ('light'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/light.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css-badge/light.css" media="screen" />');
     break;
     case ('dark'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/dark.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css-badge/dark.css" media="screen" />');
     break;
   }
   
       document.write(
-        '<div id="tumblrinlink">' +
-            '<div id="inlink-loading">Loading Tumblr In Link Badge...</div>' +
-            '<div id="inlink-title"></div>'+
-            '<ul id="inlink-list-'+config.url+'"></ul>' +
-            '<div id="inlink-logo"><a href="http://tech.gayspirit.me/in-link" title="In-Link Badge Widget"><img src="http://tumblr-in-link.googlecode.com/svn/trunk/img/in-link-sm.png" alt="Tumblr In-Link"></a></div>' +
+        '<div id="inlinkbadge">' +
+            '<div id="inlinkbadge-loading">Loading Tumblr In Link Badge...</div>' +
+            '<div id="inlinkbadge-title"></div>'+
+            '<ul id="inlinkbadge-list-'+config.url+'"></ul>' +
+            '<div id="inlinkbadge-logo"><a href="http://tech.gayspirit.me/in-link" title="In-Link Badge Widget"><img src="http://tumblr-in-link.googlecode.com/svn/trunk/img/in-link-sm.png" alt="Tumblr In-Link"></a></div>' +
         '</div>'
     );
         
