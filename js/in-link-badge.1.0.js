@@ -31,7 +31,6 @@
     var images = [];
     var items = [];
     var types = [];
-    var url = [];
     var $j = jQuery.noConflict()
 
     var scripts = document.getElementsByTagName('script');
