@@ -123,7 +123,7 @@
                 var regex = new RegExp('('+links[i]+')');
                 var html = $j("#inlink-list").html();
 
-                if(links[i]!=document.location&&!html.match(regex)){
+				{
                     if(config.num--<=0) return;
                 
                     var item='<li class="inlink-item" id="'+types[i]+'"><a class="inlink-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'"><p>'+titles[i]+'</p></a></li>';
