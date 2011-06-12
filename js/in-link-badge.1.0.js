@@ -44,8 +44,7 @@
         config[tmp[0]] = unescape(tmp[1]);
     }
     
-    if(typeof(config.url) == 'undefined'){ error(2); return; }
-    if(typeof(config.tags)=='undefined'){ error(0); return; }
+    if(typeof(config.url) == 'undefined'){ error(0); return; }
     if(typeof(config.num)=='undefined'){ config.num=8; }
     if(typeof(config.len)=='undefined'){ config.len=60; }
     if(typeof(config.title)=='undefined'){ config.title='Latest Posts:'; }
@@ -87,7 +86,7 @@
         function getRelated() {
             var req;
             for(var i=0; i<tags.length; i++){
-                req=$j.getJSON(url_base+'api/read/json?callback=?&filter=text&num='+config.num+'&start=0&type='+config.type, function(data) {
+                req=$j.getJSON(url_base+'api/read/json?callback=?&filter=text&num='+config.num+'&start=0&type='+config.type+, function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
@@ -140,9 +139,8 @@
     function getError(e){
         var msg="error: ";
         switch(e){
-            case 0: msg+='no tags defined'; break;
+            case 0: msg+='no url defined'; break;
             case 1: msg+='tumblr API problem'; break;
-            case 2: msg+='URL not defined'; break;
         }
         $j("#inlink-loading").html(msg);
     }
