@@ -127,7 +127,7 @@
                 var html = $j("#inlink-list").html();
 
 				{
-                    if(config.num--<=0) return;
+                     if(config.num--<=0) return;
                 
                     var item='<li class="inlink-item" id="'+types[i]+'"><a class="inlink-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'"><p>'+titles[i]+'</p></a></li>';
                     $j("#inlink-list").append(item);
