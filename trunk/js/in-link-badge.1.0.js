@@ -89,8 +89,13 @@
     $j(document).ready(function() {
         function getBadge() {
             var req;
-            {
-                req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&filter=text', function(data) {
+            {req=$j.getJSON(url_base+'api/read/json?callback=?&num='+config.num+'&filter=text', function(data) {
+            		$j(data.tumblelog).each(function(i, tumblelog) {
+            			ttitle.push(tumblelog['title']); 
+                        tdescr.push(post['description']);
+                        if(tdescr.length>config.len){ tdescr=tdescr.slice(0,config.len); text+='...';}
+                    });
+            
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
@@ -132,7 +137,7 @@
                     $j("#inlinkbadge-list").append(item);
                 }
             }
-            $j("#inlinkbadge-title").html('<h2>'+config.title+'</h2>');
+            $j("#inlinkbadge-title").html('<h2>'+config.title+' '+ttitle[i]+'</h2><p>'+tdescr[i]+'</p>');
             $j("#inlinkbadge-loading").html('');
         }
         getBadge();
