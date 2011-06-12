@@ -31,6 +31,7 @@
     var images = [];
     var items = [];
     var types = [];
+    var totals = [];
     var $j = jQuery.noConflict()
 
     var scripts = document.getElementsByTagName('script');
@@ -49,9 +50,11 @@
     if(typeof(config.len)=='undefined'){ config.len=60; }
     if(typeof(config.title)=='undefined'){ config.title='Latest Posts:'; }
     if(typeof(config.type)=='undefined'){ config.type=''; }
+    if(typeof(config.total)=='undefined'){ config.total=10; }
     
     var url = config.url.slice(0).split(',');
-    
+    var totals = config.total;
+        
     //var url_base = ('http://' + config.url + '/');
     
     switch(config.css) {
@@ -119,7 +122,7 @@
             
         }
         function getList(){
-            for(var i=0; i<titles.length; i++){
+            for(var i=0; i<totals.length; i++){
                 var regex = new RegExp('('+links[i]+')');
                 var html = $j("#inlink-list").html();
 
