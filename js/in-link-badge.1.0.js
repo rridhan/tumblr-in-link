@@ -80,7 +80,7 @@
         '<div id="tumblrinlink">' +
             '<div id="inlink-loading">Loading Tumblr In Link Badge...</div>' +
             '<div id="inlink-title"></div>'+
-            '<ul id="inlink-list"></ul>' +
+            '<ul id="inlink-list-'+config.url+'"></ul>' +
             '<div id="inlink-logo"><a href="http://tech.gayspirit.me/in-link" title="In-Link Badge Widget"><img src="http://tumblr-in-link.googlecode.com/svn/trunk/img/in-link-sm.png" alt="Tumblr In-Link"></a></div>' +
         '</div>'
     );
@@ -124,7 +124,7 @@
         function getLista(){
             for(var i=0; i<titles.length; i++){
                 var regex = new RegExp('('+links[i]+')');
-                var html = $j("#inlink-list").html();
+                var html = $j('"#inlink-list-'+config.url+'"').html();
 
 				{ if(config.num--<=0) return;
                 
