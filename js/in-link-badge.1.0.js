@@ -52,7 +52,7 @@
     if(typeof(config.type)=='undefined'){ config.type=''; }
     if(typeof(config.total)=='undefined'){ config.total=10; }
     
-    var url = config.url.slice(0).split(',');
+    //var url = config.url.slice(0).split(',');
     var totals = config.total;
         
     //var url_base = ('http://' + config.url + '/');
@@ -89,8 +89,8 @@
     $j(document).ready(function() {
         function getBadge() {
             var req;
-            for(var i=0; i<url.length; i++){
-                req=$j.getJSON('http://'+escape(url[i])+'/api/read/json?callback=?&num=2&filter=text', function(data) {
+            {
+                req=$j.getJSON('http://'+escape(url[i])+'/api/read/json?callback=?&num='+config.num+'&filter=text', function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
