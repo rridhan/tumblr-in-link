@@ -50,7 +50,7 @@
     if(typeof(config.title)=='undefined'){ config.title='Latest Posts:'; }
     if(typeof(config.type)=='undefined'){ config.type=''; }
     
-    var url = config.url.slice(0,-1).split(',');
+    var url = config.url.slice(0).split(',');
     
     //var url_base = ('http://' + config.url + '/');
     
