@@ -122,7 +122,7 @@
             
         }
         function getList(){
-            for(var i=0; i<totals.length; i++){
+            for(var i=0; i<titles.length; i++){
                 var regex = new RegExp('('+links[i]+')');
                 var html = $j("#inlink-list").html();
 
