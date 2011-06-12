@@ -132,7 +132,7 @@
                     $j('#list-'+config.url+'').append(item);
                 }
             }
-            $j('"#title-'+config.url+'"').html('<h2>'+config.title+'</h2>');
+            $j('#title-'+config.url+'').html('<h2>'+config.title+'</h2>');
             $j("#inlinkbadge-loading").html('');
         }
         getBadge();
