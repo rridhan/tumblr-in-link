@@ -129,7 +129,7 @@
 				{ if(config.num--<=0) return;
                 
                     var item='<li class="inlinkbadge-item" id="'+types[i]+'"><a class="inlinkbadge-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'"><p>'+titles[i]+'</p></a></li>';
-                    $j("#inlinkbadge-list").append(item);
+                    $j('"#inlinkbadge-list-'+config.url+'"').append(item);
                 }
             }
             $j("#inlinkbadge-title").html('<h2>'+config.title+'</h2>');
