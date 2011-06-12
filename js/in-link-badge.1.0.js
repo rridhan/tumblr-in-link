@@ -51,7 +51,7 @@
     if(typeof(config.title)=='undefined'){ config.title='Latest Posts:'; }
     if(typeof(config.type)=='undefined'){ config.type=''; }
     
-    var url_base = ('http://' + config.url + '/'));
+    var url_base = ('http://' + config.url + '/');
     
     switch(config.css) {
     case ('simple'):
