@@ -84,7 +84,7 @@
     $j(document).ready(function() {
         function getRelated() {
             var req;
-            for(var i=0; i<tags.length; i++){
+            for(var i=0; i<url.length; i++){
                 req=$j.getJSON(url_base+'api/read/json?callback=?&filter=text&num='+config.num+'&start=0&type='+config.type+ function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
