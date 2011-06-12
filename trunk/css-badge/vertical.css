@@ -29,7 +29,6 @@
 .inlinkbadge {
 		clear:both;
 		border-top:1px dashed #ddd; 
-		padding:25px 30px 10px 30px; 
 		color:#626566;
 		width:200px;
 			}
@@ -76,6 +75,7 @@ li.inlinkbadge-item p {
 			}
 #inlinkbadge-list {
 		min-height:195px;
+		padding:5px;
 			}
 li.inlinkbadge-item#regular {
 		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/bgs.png) 0 0 repeat-x;)
