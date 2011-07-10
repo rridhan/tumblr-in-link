@@ -71,8 +71,10 @@
     break;
   }
   
+      var urls = config.url.slice(0,0).split(',');
+  
       document.write(
-        '<div class="inlinkbadge" id="badge-'+config.url+'">' +
+        '<div class="inlinkbadge" id="badge-'+urls+'">' +
             '<div id="inlinkbadge-loading">Loading Tumblr In Link Badge...</div>' +
             '<div id="inlinkbadge-title"></div>'+
             '<ul class="" id="inlinkbadge-list"></ul>' +
@@ -80,7 +82,7 @@
         '</div>'
     );
         
-    var urls = config.url.slice(0,0).split(',');
+
  
 
     $j(document).ready(function() {
