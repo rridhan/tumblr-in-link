@@ -80,7 +80,7 @@
         '</div>'
     );
         
-    var urls = config.url.slice(0,-1).split(',');
+    var urls = config.url.slice(0,0).split(',');
  
 
     $j(document).ready(function() {
