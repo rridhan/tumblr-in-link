@@ -51,10 +51,7 @@
     if(typeof(config.type)=='undefined'){ config.type=''; }
     if(typeof(config.total)=='undefined'){ config.total=10; }
     
-    var urls = config.tags.slice(0,-1).split(',');
-    
-    var url_base = ('http://' + urls + '/');
-    
+   
     switch(config.css) {
     case ('simple'):
       document.write('<link rel="stylesheet" type="text/css" ' +
@@ -83,12 +80,14 @@
         '</div>'
     );
         
+    var urls = config.url.slice(0,-1).split(',');
+ 
 
     $j(document).ready(function() {
         function getBadge() {
             var req;
-            for(var i=0; i<url_base.length; i++){
-            req=$j.getJSON(escape(url_base[i])+'api/read/json?callback=?&num='+config.num+'&filter=text', function(data) {
+            for(var i=0; i<urls.length; i++){
+            req=$j.getJSON('http://'escape(urls[i])+'/api/read/json?callback=?&num='+config.num+'&filter=text', function(data) {
                     $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='regular') text+=post['regular-title'];
