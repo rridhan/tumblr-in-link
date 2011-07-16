@@ -107,7 +107,7 @@
                         else if(post.type=='audio') image+=['audio-caption'];
                         else if(post.type=='answer') image+=['question'];
                         titles.push(text);
-                        links.push(post['url-with-slug']); 
+                        links.push(post['post-url']); 
                         images.push(image);
                         types.push(post['type'])
                     });
