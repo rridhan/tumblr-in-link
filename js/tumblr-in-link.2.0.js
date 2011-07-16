@@ -86,7 +86,6 @@
             var req;
             for(var i=0; i<tags.length; i++){
                 req=$j.getJSON('http://api.tumblr.com/v2/blog/'+document.domain+'/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&jsonp=callback=?&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i]), function(data) {
-            
                    $j(data.posts).each(function(i, post) {
                         var text='';
                         if(post.type=='text') text+=post['title'];
@@ -100,12 +99,6 @@
                         if(text.length>config.len){ text=text.slice(0,config.len); text+='...';}
                         var image ='';
                         if(post.type=='photo') image+=post['url'];
-                        else if(post.type=='link') image+=['link-text'];
-                        else if(post.type=='quote') image+=['quote-text'];
-                        else if(post.type=='photo') image+=['photo-caption'];
-                        else if(post.type=='video') image+=['video-caption'];
-                        else if(post.type=='audio') image+=['audio-caption'];
-                        else if(post.type=='answer') image+=['question'];
                         titles.push(text);
                         links.push(post['post-url']); 
                         images.push(image);
