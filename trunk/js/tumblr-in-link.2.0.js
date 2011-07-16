@@ -85,10 +85,7 @@
         function getRelated() {
             var req;
             for(var i=0; i<tags.length; i++){
-                req=$j.ajax({
-                url: 'http://api.tumblr.com/v2/blog/'+document.domain+'/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&jsonp=callback&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i]), 
-                dataType: 'jsonp',
-                success: function(data){
+                req=$j.getJSON('http://api.tumblr.com/v2/blog/'+document.domain+'/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&jsonp=callback=?&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i]), function(data) {
             
                    $j(data.posts).each(function(i, post) {
                         var text='';
@@ -115,7 +112,7 @@
                         images.push(image);
                         types.push(post['type'])
                     });
-                    }
+                    
                 }).complete(getList);
             }
             
