@@ -89,16 +89,17 @@
             
                    $j(data.posts).each(function(i, post) {
                         var text='';
-                        if(post.type=='text') text+=post['text-title'];
-                        else if(post.type=='link') text+=post['link-text'];
-                        else if(post.type=='quote') text+=post['quote-text'];
-                        else if(post.type=='photo') text+=post['photo-caption'];
-                        else if(post.type=='video') text+=post['video-caption'];
-                        else if(post.type=='audio') text+=post['audio-caption'];
+                        if(post.type=='text') text+=post['title'];
+                        else if(post.type=='link') text+=post['title'];
+                        else if(post.type=='chat') text+=post['body'];
+                        else if(post.type=='quote') text+=post['text'];
+                        else if(post.type=='photo') text+=post['caption'];
+                        else if(post.type=='video') text+=post['caption'];
+                        else if(post.type=='audio') text+=post['caption'];
                         else if(post.type=='answer') text+=post['question'];
                         if(text.length>config.len){ text=text.slice(0,config.len); text+='...';}
                         var image ='';
-                        if(post.type=='photo') image+=post['photo-url-100'];
+                        if(post.type=='photo') image+=post['url'];
                         else if(post.type=='link') image+=['link-text'];
                         else if(post.type=='quote') image+=['quote-text'];
                         else if(post.type=='photo') image+=['photo-caption'];
