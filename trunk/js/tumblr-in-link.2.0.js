@@ -114,7 +114,7 @@
                         links.push(post['url-with-slug']); 
                         images.push(image);
                         types.push(post['type'])
-                    }});
+                    });
                     
                 }).complete(getList);
             }
