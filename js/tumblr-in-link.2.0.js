@@ -89,11 +89,10 @@
             
                    $j(data.posts).each(function(i, post) {
                         var text='';
-                        if(post.type=='regular') text+=post['regular-title'];
+                        if(post.type=='text') text+=post['text-title'];
                         else if(post.type=='link') text+=post['link-text'];
                         else if(post.type=='quote') text+=post['quote-text'];
                         else if(post.type=='photo') text+=post['photo-caption'];
-                        else if(post.type=='conversation') text+=post['conversation-title'];
                         else if(post.type=='video') text+=post['video-caption'];
                         else if(post.type=='audio') text+=post['audio-caption'];
                         else if(post.type=='answer') text+=post['question'];
@@ -103,7 +102,6 @@
                         else if(post.type=='link') image+=['link-text'];
                         else if(post.type=='quote') image+=['quote-text'];
                         else if(post.type=='photo') image+=['photo-caption'];
-                        else if(post.type=='conversation') image+=['conversation-title'];
                         else if(post.type=='video') image+=['video-caption'];
                         else if(post.type=='audio') image+=['audio-caption'];
                         else if(post.type=='answer') image+=['question'];
