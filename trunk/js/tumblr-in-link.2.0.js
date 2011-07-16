@@ -115,7 +115,7 @@
                         images.push(image);
                         types.push(post['type'])
                     });
-                    
+                    }
                 }).complete(getList);
             }
             
