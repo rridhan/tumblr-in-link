@@ -24,6 +24,7 @@ li.inlink-item#conversation { }
 li.inlink-item#video { }
 li.inlink-item#audio { }
 li.inlink-item#answer { }
+.notes { } /*New in version 2*/
 }}}
 
 Feel free to customize your look and feel through these options.
