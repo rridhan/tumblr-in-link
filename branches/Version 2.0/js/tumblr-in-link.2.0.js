@@ -51,7 +51,7 @@
     if(typeof(config.len)=='undefined'){ config.len=60; }
     if(typeof(config.size)=='undefined'){ config.size=100; }
     if(typeof(config.title)=='undefined'){ config.title='Related Posts:'; }
-    if(typeof(config.imageurl)=='undefined'){ config.imageurl='http://www.snr.arizona.edu/files/shared/images/placeholder.jpg'; }
+    if(typeof(config.imageurl)=='undefined'){ config.imageurl='http://tumblr-in-link.googlecode.com/svn/branches/Version 2.0/img/placeholder.jpg'; }
     if(typeof(config.type)=='undefined'){ config.type=''; }
     
     switch(config.css) {
@@ -92,8 +92,10 @@
         function getRelated() {
             var req;
             for(var i=0; i<tags.length; i++){
-                req=$j.getJSON('http://api.tumblr.com/v2/blog/tech.gayspirit.me/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
+                req=$j.getJSON('http://api.tumblr.com/v2/blog/'+document.domain+'/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
                 function(pippo) {
+                	/*Hide all if no content is available - only happens if there's only one post per tag*/
+                	if(pippo.response.total_posts==0) hideall();
                    $j(pippo.response.posts).each(function(i, post) {
                    		/*Set Text*/
 						var text='';
@@ -163,7 +165,7 @@
                     });
                     
                 }).complete(getList);
-                               
+                            
             }
             
         }
@@ -191,7 +193,13 @@
         switch(e){
             case 0: msg+='no tags defined'; break;
             case 1: msg+='tumblr API problem'; break;
+            case 2: msg+='tumblr problem'; break;
         }
         $j("#inlink-loading").html(msg);
+    }
+    
+        function hideall(){
+        $j('#tumblrinlink').hide();
+
     }
 })();
