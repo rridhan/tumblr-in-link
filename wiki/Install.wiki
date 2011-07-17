@@ -73,3 +73,5 @@ Here the various options:
   * *NEW FOR VERSION 2.0*: *imageurl* specify a URL pointing to an image that will be used as a placeholder in case no image is available.
 
   * *Remember to connect* all options with an “&” and leave the tags option at the end, the way it is written. *Also please use only the options that are relevant for the version you’re using*.
+
+<g:plusone size="medium"></g:plusone>
