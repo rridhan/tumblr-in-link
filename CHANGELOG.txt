@@ -4,3 +4,7 @@ In-Link - Changelog
 
 2011/05/01
 Initial Release
+
+2011/07/17
+Version 2 Releases.
+Check http://code.google.com/p/tumblr-in-link/source/browse/#svn%2Fbranches%2FVersion%202.0 for more infos
