@@ -6,7 +6,7 @@
  *
  *   Changelog:
  *   1.0 - Initial Release
- *   2.0 - Release to exploit the Api v.2. release.
+ *   2.0 - Release to exploit the Api v.2. release with new features
  * 
  *   All rights reserved.
  *
@@ -30,9 +30,7 @@
     var titles = [];
     var links = [];
     var images = [];
-    var width = [];    
     var notes = [];
-    var height = [];
     var items = [];
     var types = [];
     var $j = jQuery.noConflict()
@@ -53,24 +51,29 @@
     if(typeof(config.len)=='undefined'){ config.len=60; }
     if(typeof(config.size)=='undefined'){ config.size=100; }
     if(typeof(config.title)=='undefined'){ config.title='Related Posts:'; }
+    if(typeof(config.imageurl)=='undefined'){ config.imageurl='http://www.snr.arizona.edu/files/shared/images/placeholder.jpg'; }
     if(typeof(config.type)=='undefined'){ config.type=''; }
     
     switch(config.css) {
     case ('simple'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/simple.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/branches/Version 2.0/css/simple.css" media="screen" />');
     break;
     case ('complete'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/complete.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/branches/Version 2.0/css/complete.css" media="screen" />');
     break;
     case ('light'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/light.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/branches/Version 2.0/css/light.css" media="screen" />');
     break;
     case ('dark'):
       document.write('<link rel="stylesheet" type="text/css" ' +
-      'href="http://tumblr-in-link.googlecode.com/svn/trunk/css/dark.css" media="screen" />');
+      'href="http://tumblr-in-link.googlecode.com/svn/branches/Version 2.0/css/dark.css" media="screen" />');
+    break;
+    case ('shadow'):
+      document.write('<link rel="stylesheet" type="text/css" ' +
+      'href="http://tumblr-in-link.googlecode.com/svn/branches/Version 2.0/css/shadow.css" media="screen" />');
     break;
   }
   
@@ -89,10 +92,9 @@
         function getRelated() {
             var req;
             for(var i=0; i<tags.length; i++){
-                req=$j.getJSON('http://api.tumblr.com/v2/blog/gayspirit.me/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
-                function(data) {
-                   console.log(data.response.posts);
-                   $j(data.response.posts).each(function(i, post) {
+                req=$j.getJSON('http://api.tumblr.com/v2/blog/'+document.domain+'/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
+                function(pippo) {
+                   $j(pippo.response.posts).each(function(i, post) {
 						var text='';
                         if(post.type=='text') text+=post['title'];
                         else if(post.type=='link') text+=post['title'];
@@ -102,29 +104,49 @@
                         else if(post.type=='video') text+=post['caption'];
                         else if(post.type=='audio') text+=post['caption'];
                         else if(post.type=='answer') text+=post['question'];
-                        if(text.length>config.len){ text=text.slice(0,config.len); text+='...';} /*slice text to the desired length*/
-                        var StrippedText = text.replace(/(<([^>]+)>)/ig,"");
-                        if(post.type=='photo'){ 
+                        var StrippedText = text.replace(/(<([^>]+)>)/ig,""); /*Stripe HTML from text*/
+                        if(StrippedText.length>config.len){ StrippedText=StrippedText.slice(0,config.len); StrippedText+='...';} /*slice text to the desired length*/
                         var image ='';
                         var imageh ='';
                         var imagew ='';
+                        if(post.type=='text'){
+                        	var fullbody = post.body;
+                        	var fullbodyset = $j(fullbody);
+                         	image = fullbodyset.find('img').attr('src');
+                        }
+                        if(post.type=='audio'){
+                        	image+=this.album_art;
+                        }
+                        else if(post.type=='photo'){ 
                         /*Loop to the various photos data, and make sure to select only the first in case of a slideshow*/
-                        $j(post.photos[0]).each(function(i, photo) {
+                        $j(this.photos[0]).each(function(i, photo) {
                         		/*Loop through the various photo size to get the thumbnail information*/
-                        		$j(photo.alt_sizes).each(function(i, alt_size) {
+                        		$j(this.alt_sizes).each(function(i, alt_size) {
                         		if(config.size=='75') {
-                        			if(alt_size.width=='75') {image+=alt_size['url']; imageh+=alt_size['height']; imagew+=alt_size['width']}
+                        			if(alt_size.width=='75') {image+=alt_size['url'];}
+                        			}
+                        		if(config.size=='100') {
+                        			if(alt_size.width=='100') {image+=alt_size['url'];}
+                        			}
+                        		if(config.size=='250') {
+                        			if(alt_size.width=='250') {image+=alt_size['url'];}
                         			}
         						});
         					});
-        					images.push(image);
-                        	height.push(imageh);
-                        	width.push(imagew);
+
         				}
+        				if(image==0){image=config.imageurl; };
+        				if(image=='undefined'){image=config.imageurl; };
+        				
+        				var note ='';
+        				note+=post['note_count'];
+        				if(note=='undefined'){note='0'; };
+        				
+        				images.push(image);
 	                    titles.push(StrippedText);
                         links.push(post['post_url']); 
                         types.push(post['type']);
-                        notes.push(post['note_count']);
+                        notes.push(note);
                     });
                     
                 }).complete(getList);
@@ -140,7 +162,7 @@
                 if(links[i]!=document.location&&!html.match(regex)){
                     if(config.num--<=0) return;
                 
-                    var item='<li class="inlink-item" id="'+types[i]+'"><a class="inlink-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'" height="'+height[i]+'" width="'+width[i]+'"><p>'+titles[i]+'</p></a></li>';
+                    var item='<li class="inlink-item" id="'+types[i]+'"><div class="shade1"><div class="shade2"><div class="shade3"><div class="clipout"><div class="clipin"><a class="inlink-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'"><div class="notes"></div></div></div></div></div></div><p>'+titles[i]+' <span id="#notes" class="notes" style="display:inline">&hearts;'+notes[i]+'</span></p></a></li>';
                     $j("#inlink-list").append(item);
                 }
             }
