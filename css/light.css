@@ -8,6 +8,7 @@
  *
  *   Changelog:
  *   1.0 - Initial Release		2011/05/01
+ *   2.0 - 2.0 release			2011/07/17
  * 
  *   All rights reserved.
  *
@@ -96,4 +97,5 @@ li.inlink-item#audio {
 li.inlink-item#answer {
 		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/bgs.png) 600px 0 repeat-x;)
 			}
+.notes { float: right; }
 			

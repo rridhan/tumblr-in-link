@@ -8,6 +8,7 @@
  *
  *   Changelog:
  *   1.0 - Initial Release		2011/05/01
+ *   2.0 - 2.0 release			2011/07/17
  * 
  *   All rights reserved.
  *
@@ -36,10 +37,11 @@ li.inlink-item p { }	/* The actual title for the link */
 #inlink-list { }		/* The ul container */
 /* Each li has its own selector for individual styling depending
 * on post type. */
-li.inlink-item#regular { }
+li.inlink-item#text { }
 li.inlink-item#link { }
 li.inlink-item#quote { }
 li.inlink-item#conversation { }
 li.inlink-item#video { }
 li.inlink-item#audio { }
 li.inlink-item#answer { }
+.notes { }
