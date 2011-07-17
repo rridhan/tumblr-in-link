@@ -103,10 +103,13 @@ li.inlink-item p {
 		text-align:left; 
 		line-height:1.1em;
 		overflow:hidden;
-			}
+		text-decoration:none;
+		}
 
 #inlink-list {
 		min-height:160px;
-			}
+		}
 
-			
+.notes {
+		float:right;
+	}
