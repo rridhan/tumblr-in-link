@@ -96,6 +96,7 @@
                 function(pippo) {
                 	/*Hide all if no content is available - only happens if there's only one post per tag*/
                 	if(pippo.response.total_posts--<=1) hideall();
+                	console.log(pippo.response.total_posts);
                     $j(pippo.response.posts).each(function(i, post) {
                    		/*Set Text*/
 						var text='';
