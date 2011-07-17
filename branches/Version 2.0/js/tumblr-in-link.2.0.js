@@ -6,7 +6,7 @@
  *
  *   Changelog:
  *   1.0 - Initial Release
- *   2.0 - Release to exploit the Api v.2. release with new features
+ *   2.0 - Release to exploit the Api v.2. release.
  * 
  *   All rights reserved.
  *
@@ -92,9 +92,10 @@
         function getRelated() {
             var req;
             for(var i=0; i<tags.length; i++){
-                req=$j.getJSON('http://api.tumblr.com/v2/blog/'+document.domain+'/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
+                req=$j.getJSON('http://api.tumblr.com/v2/blog/tech.gayspirit.me/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
                 function(pippo) {
                    $j(pippo.response.posts).each(function(i, post) {
+                   		/*Set Text*/
 						var text='';
                         if(post.type=='text') text+=post['title'];
                         else if(post.type=='link') text+=post['title'];
@@ -104,44 +105,56 @@
                         else if(post.type=='video') text+=post['caption'];
                         else if(post.type=='audio') text+=post['caption'];
                         else if(post.type=='answer') text+=post['question'];
-                        var StrippedText = text.replace(/(<([^>]+)>)/ig,""); /*Stripe HTML from text*/
-                        if(StrippedText.length>config.len){ StrippedText=StrippedText.slice(0,config.len); StrippedText+='...';} /*slice text to the desired length*/
+                        /*Strip HTML from text*/
+                        var StrippedText = text.replace(/(<([^>]+)>)"/ig,"");
+                        /*slice text to the desired length*/
+                        if(StrippedText.length>config.len){ StrippedText=StrippedText.slice(0,config.len); StrippedText+='...';} 
+                        /*get images*/
                         var image ='';
-                        var imageh ='';
-                        var imagew ='';
+                        /*If article, try to get the first image out of the body*/
                         if(post.type=='text'){
                         	var fullbody = post.body;
                         	var fullbodyset = $j(fullbody);
-                         	image = fullbodyset.find('img').attr('src');
-                        }
-                        if(post.type=='audio'){
+                         	image += fullbodyset.find('img').attr('src');
+                         	}
+                        /*If audio, get the album cover if available*/
+                        else if(post.type=='audio'){
                         	image+=this.album_art;
-                        }
+                        	}
                         else if(post.type=='photo'){ 
-                        /*Loop to the various photos data, and make sure to select only the first in case of a slideshow*/
-                        $j(this.photos[0]).each(function(i, photo) {
+                        	/*Loop to the various photos data, and make sure to select only the first in case of a slideshow*/
+                        	$j(this.photos[0]).each(function(i, photo) {
                         		/*Loop through the various photo size to get the thumbnail information*/
-                        		$j(this.alt_sizes).each(function(i, alt_size) {
-                        		if(config.size=='75') {
-                        			if(alt_size.width=='75') {image+=alt_size['url'];}
-                        			}
-                        		if(config.size=='100') {
-                        			if(alt_size.width=='100') {image+=alt_size['url'];}
-                        			}
-                        		if(config.size=='250') {
-                        			if(alt_size.width=='250') {image+=alt_size['url'];}
-                        			}
+                        			$j(this.alt_sizes).each(function(i, alt_size) {
+                        			if(config.size=='75') {
+                        				if(alt_size.width=='75') {image+=alt_size['url'];}
+                        				}
+                        			if(config.size=='100') {
+                        				if(alt_size.width=='100') {image+=alt_size['url'];}
+                        				}
+                        			if(config.size=='250') {
+                        				if(alt_size.width=='250') {image+=alt_size['url'];}
+                        				}
+        							});
         						});
-        					});
-
-        				}
-        				/*Specify default image when undefined*/
-        				if(image==0){image=config.imageurl; };
-        				if(image=='undefined'){image=config.imageurl; };
-        				/*Define note for Note Count*/
+							}
+        				/*For other types, use the standard image*/
+        				else if(post.type=='link') image += 0
+                        else if(post.type=='chat')  image += 0
+                        else if(post.type=='quote')  image += 0
+                        else if(post.type=='photo')  image += 0
+                        else if(post.type=='answer')  image += 0;
+        				
+        				/*Manage Exceptions*/
+        				if(image==0){image=config.imageurl; }
+        				else if(image=='undefined'){image=config.imageurl; };
+        				
+        				/*Set Notes*/
         				var note ='';
         				note+=post['note_count'];
         				if(note=='undefined'){note='0'; };
+        				
+        				/*Transfer pieces*/
         				images.push(image);
 	                    titles.push(StrippedText);
                         links.push(post['post_url']); 
