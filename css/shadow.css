@@ -53,16 +53,9 @@ li.inlink-item {
 		overflow:hidden;
 			}
 li.inlink-item img {
-		display:none;
-			}
-li.inlink-item#photo img {
 		max-width:250px;
 		display:block;
 			}
-li.inlink-item#text img {
-		max-width:250px;
-		display:block;
-		}		
 			
 .clipout{
   position:relative;
