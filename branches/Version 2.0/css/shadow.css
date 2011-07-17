@@ -105,7 +105,7 @@ li.inlink-item p {
 		overflow:hidden;
 			}
 
-li.inlink-item.notes	{ 
+.notes	{ 
 	position: absolute;
 	top: 50px;
 	left: 85px;
@@ -116,7 +116,7 @@ li.inlink-item.notes	{
 	display: none;
 	}
 		
-li.inlink-item.notes:hover { 
+.notes:hover { 
 	display: inline;
 
 	}
