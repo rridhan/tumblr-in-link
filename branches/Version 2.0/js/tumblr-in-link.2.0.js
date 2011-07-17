@@ -95,7 +95,7 @@
                 req=$j.getJSON('http://api.tumblr.com/v2/blog/'+document.domain+'/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
                 function(pippo) {
                 	/*Hide all if no content is available - only happens if there's only one post per tag*/
-                	if(pippo.response.total_posts==0) hideall();
+                	if(pippo.response.total_posts--<=1) hideall();
                     $j(pippo.response.posts).each(function(i, post) {
                    		/*Set Text*/
 						var text='';
