@@ -94,9 +94,6 @@
             for(var i=0; i<tags.length; i++){
                 req=$j.getJSON('http://api.tumblr.com/v2/blog/'+document.domain+'/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
                 function(pippo) {
-                	/*Hide all if no content is available - only happens if there's only one post per tag*/
-                	if(pippo.response.total_posts--<=1) hideall();
-                	console.log(pippo.response.total_posts);
                     $j(pippo.response.posts).each(function(i, post) {
                    		/*Set Text*/
 						var text='';
@@ -174,7 +171,7 @@
             for(var i=0; i<titles.length; i++){
                 var regex = new RegExp('('+links[i]+')');
                 var html = $j("#inlink-list").html();
-
+				
                 if(links[i]!=document.location&&!html.match(regex)){
                     if(config.num--<=0) return;
                 
@@ -182,6 +179,8 @@
                     $j("#inlink-list").append(item);
                 }
             }
+            if(links.length==0) hideall();
+            console.log(links.length);
             $j("#inlink-title").html('<h2>'+config.title+'</h2>');
             $j("#inlink-loading").html('');
         }
