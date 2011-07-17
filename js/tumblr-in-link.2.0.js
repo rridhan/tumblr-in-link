@@ -51,6 +51,7 @@
     if(typeof(config.tags)=='undefined'){ error(0); return; }
     if(typeof(config.num)=='undefined'){ config.num=8; }
     if(typeof(config.len)=='undefined'){ config.len=60; }
+    if(typeof(config.size)=='undefined'){ config.size=100; }
     if(typeof(config.title)=='undefined'){ config.title='Related Posts:'; }
     if(typeof(config.type)=='undefined'){ config.type=''; }
     
@@ -89,9 +90,9 @@
             var req;
             for(var i=0; i<tags.length; i++){
                 req=$j.getJSON('http://api.tumblr.com/v2/blog/gayspirit.me/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
-                function(pippo) {
-                   console.log(pippo.response.posts);
-                   $j(pippo.response.posts).each(function(i, post) {
+                function(data) {
+                   console.log(data.response.posts);
+                   $j(data.response.posts).each(function(i, post) {
 						var text='';
                         if(post.type=='text') text+=post['title'];
                         else if(post.type=='link') text+=post['title'];
@@ -111,7 +112,9 @@
                         $j(post.photos[0]).each(function(i, photo) {
                         		/*Loop through the various photo size to get the thumbnail information*/
                         		$j(photo.alt_sizes).each(function(i, alt_size) {
-                        		if(alt_size.width=='75') {image+=alt_size['url']; imageh+=alt_size['height']; imagew+=alt_size['width']}
+                        		if(config.size=='75') {
+                        			if(alt_size.width=='75') {image+=alt_size['url']; imageh+=alt_size['height']; imagew+=alt_size['width']}
+                        			}
         						});
         					});
         					images.push(image);
