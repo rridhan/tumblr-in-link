@@ -27,4 +27,10 @@ http://media.tumblr.com/tumblr_lkj4eaxxt51qzz9h9.png
 
 == Light Style == 
 
-Same as above, only for a darker background. In this case the option should be css=light. 
+Same as above, only for a darker background. In this case the option should be *css=light*. 
+
+== Shadow Style (only for version 2.0) ==
+
+This style is especially useful for rich photography site, and is based on the creation of “clipped” thumbnails. Works at its best with image size set to 250 (so set size=250) as it will create a better “clipping”. Set this option for usage *css=shadow*. 
+
+http://media.tumblr.com/tumblr_loholutHB51qzz9h9.png
