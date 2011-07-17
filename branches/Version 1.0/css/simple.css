@@ -1,0 +1,47 @@
+/*
+ *   In-Link Widget Code version 1.0
+ *	 Simple Stylesheet. Will display a list.
+ *	 File Name: simple.css
+ *   
+ *   Copyright (c) 2011, Gayspirit - http://tech.gayspirit.me/in-link
+ *   Based on the Work by Eduardo Miranda - http://code.google.com/p/relposts/
+ *
+ *   Changelog:
+ *   1.0 - Initial Release		2011/05/01
+ * 
+ *   All rights reserved.
+ *
+ *   In-Link is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   In-Link is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with Tumblr In-Link.  If not, see <http://www.gnu.org/licenses/>.
+ *
+*/
+
+#tumblrinlink {
+		clear:both;
+		border-top:1px dashed #ddd; 
+		padding:25px 30px 10px 30px; 
+			}
+#tumblrinlink a {
+		color:#000;
+			}
+#tumblrinlink h2 {
+		padding-bottom:20px;
+			}
+ul#inlink-list {
+		list-style-type: square;
+			}			
+li.inlink-item img {
+		display:none;
+			}
+
+
