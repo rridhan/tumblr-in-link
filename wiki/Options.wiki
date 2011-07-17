@@ -1,0 +1,6 @@
+#summary this section will, guide you through the different options of In-Link
+#labels Phase-Deploy
+
+= Options =
+
+The *In-Link* widget is very flexible thanks to the possibility of using its various options directly set up in the call to the JavaScript.
