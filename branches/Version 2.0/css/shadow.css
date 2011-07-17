@@ -26,93 +26,101 @@
  *
 */
 
-#tumblrinlink {
-		clear:both;
-		border-top:1px dashed #ddd; 
-		padding:25px 30px 10px 30px; 
-		color:#626566;
-			}
-#tumblrinlink h2 {
-		font-size:20px;
-		display:inline-block; 
-		padding-bottom:20px;
-			}
-			
-#tumblrinlink a {
-		color:#333;
-			}
-
-li.inlink-item {
-		display:block; 
-		float:left;
-		margin-right:5px; 
-		margin-bottom:5px; 
-		height:140px;
-		padding:4px; 
-		position:relative;
-		overflow:hidden;
-			}
-li.inlink-item img {
-		max-width:250px;
-		display:block;
-			}
-/*Clipout trick from http://www.seifi.org/css/creating-thumbnails-using-the-css-clip-property.html*/			
-.clipout{
-  position:relative;
-  width:136px;
-  height:105px;
-  top:-1px;
-  left:-1px;
+#tumblrinlink
+{
+	clear: both;
+	border-top: 1px dashed #ddd;
+	padding: 25px 30px 10px 30px;
+	color: #626566;
 }
-.clipin{
-  position:absolute;
-  clip:rect(50px 218px 155px 82px);
-  top:-50px;
-  left:-82px;
-}
-.shade1{
-  width:136px;
-  height:105px;
-  background-color:#e8e8e8;
-}
-.shade2{
-  position:relative;
-  width:136px;
-  height:105px;
-  background-color:#cbcbcb;
-  top:-2px;
-  left:-2px;
-}
-.shade3{
-  position:relative;
-  width:136px;
-  height:105px;
-  background-color:#a0a0a0;
-  top:-1px;
-  left:-1px;
-}			
 
-	
-li.inlink-item p {
-		height:30px;
-		display:block;
-		position:absolute;
-		bottom:0;
-		margin-bottom:4px; 
-		font-size:0.8em; 
-		text-align:left; 
-		line-height:1.1em;
-		overflow:hidden;
-		text-decoration:none;
-		}
+#tumblrinlink h2
+{
+	font-size: 20px;
+	display: inline-block;
+	padding-bottom: 20px;
+}
 
-#inlink-list {
-		min-height:160px;
-		}
+#tumblrinlink a { color: #333; }
 
-.notes {
-		float:right;
-	}
-.notes a {
-		text-decoration:none;
-	}
+li.inlink-item
+{
+	display: block;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	height: 140px;
+	padding: 4px;
+	position: relative;
+	overflow: hidden;
+}
+
+li.inlink-item img
+{
+	max-width: 250px;
+	display: block;
+}
+
+/*Clipout trick from http://www.seifi.org/css/creating-thumbnails-using-the-css-clip-property.html*/
+.clipout
+{
+	position: relative;
+	width: 136px;
+	height: 105px;
+	top: -1px;
+	left: -1px;
+}
+
+.clipin
+{
+	position: absolute;
+	clip: rect(50px 218px 155px 82px);
+	top: -50px;
+	left: -82px;
+}
+
+.shade1
+{
+	width: 136px;
+	height: 105px;
+	background-color: #e8e8e8;
+}
+
+.shade2
+{
+	position: relative;
+	width: 136px;
+	height: 105px;
+	background-color: #cbcbcb;
+	top: -2px;
+	left: -2px;
+}
+
+.shade3
+{
+	position: relative;
+	width: 136px;
+	height: 105px;
+	background-color: #a0a0a0;
+	top: -1px;
+	left: -1px;
+}
+
+li.inlink-item p
+{
+	height: 30px;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 4px;
+	font-size: 0.8em;
+	text-align: left;
+	line-height: 1.1em;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+#inlink-list { min-height: 160px; }
+.notes { float: right; }
+
+a.inlinl-link  { text-decoration: none; }
