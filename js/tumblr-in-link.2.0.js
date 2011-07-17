@@ -96,7 +96,7 @@
                 function(pippo) {
                 	/*Hide all if no content is available - only happens if there's only one post per tag*/
                 	if(pippo.response.total_posts==0) hideall();
-                   $j(pippo.response.posts).each(function(i, post) {
+                    $j(pippo.response.posts).each(function(i, post) {
                    		/*Set Text*/
 						var text='';
                         if(post.type=='text') text+=post['title'];
