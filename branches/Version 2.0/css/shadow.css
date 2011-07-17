@@ -113,3 +113,6 @@ li.inlink-item p {
 .notes {
 		float:right;
 	}
+.notes a {
+		text-decoration:none;
+	}
