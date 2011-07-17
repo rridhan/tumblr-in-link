@@ -1,13 +1,12 @@
 /*
  *   In-Link Widget Code version 2.0
  *	 Dark Coloured Style Sheet for Light Background.
- *	 File Name: dark.css
+ *	 File Name: shadow.css
  *   
  *   Copyright (c) 2011, Gayspirit - http://tech.gayspirit.me/in-link
  *   Based on the Work by Eduardo Miranda - http://code.google.com/p/relposts/
  *
  *   Changelog:
- *   1.0 - Initial Release		2011/05/01
  *   2.0 - 2.0 release			2011/07/17
  * 
  *   All rights reserved.
@@ -42,6 +41,30 @@
 #tumblrinlink a {
 		color:#333;
 			}
+
+li.inlink-item {
+		display:block; 
+		float:left;
+		margin-right:5px; 
+		margin-bottom:5px; 
+		height:180px;
+		border:1px solid #AAA; 
+		padding:4px; 
+		width:110px; 
+		position:relative;
+		overflow:hidden;
+			}
+li.inlink-item img {
+		display:none;
+			}
+li.inlink-item#photo img {
+		max-width:250px;
+		display:block;
+			}
+li.inlink-item#text img {
+		max-width:250px;
+		display:block;
+		}		
 			
 .clipout{
   position:relative;
@@ -78,35 +101,7 @@
   left:-1px;
 }			
 
-li.inlink-item {
-		display:block; 
-		float:left;
-		margin-right:5px; 
-		margin-bottom:5px; 
-		height:180px;
-		border:1px solid #AAA; 
-		padding:4px; 
-		width:110px; 
-		position:relative;
-		overflow:hidden;
-			}
-li.inlink-item img {
-		display:none;
-			}
-li.inlink-item#photo img {
-		max-height:150px;
-		max-width:100px;
-		vertical-align:top;
-		display:block;
-		margin:auto;
-			}
-li.inlink-item#text img {
-		max-height:150px;
-		max-width:100px;
-		vertical-align:top;
-		display:block;
-		margin:auto;
-		}			
+	
 li.inlink-item p {
 		height:30px;
 		display:block;
