@@ -1,5 +1,5 @@
 /*
- *   In-Link Widget Code version 1.0
+ *   In-Link Widget Code version 2.0
  *	 Dark Coloured Style Sheet for Light Background.
  *	 File Name: dark.css
  *   
@@ -8,6 +8,7 @@
  *
  *   Changelog:
  *   1.0 - Initial Release		2011/05/01
+ *   2.0 - 2.0 release			2011/07/17
  * 
  *   All rights reserved.
  *
@@ -58,10 +59,18 @@ li.inlink-item img {
 			}
 li.inlink-item#photo img {
 		max-height:150px;
+		max-width:100px;
 		vertical-align:top;
 		display:block;
 		margin:auto;
 			}
+li.inlink-item#text img {
+		max-height:150px;
+		max-width:100px;
+		vertical-align:top;
+		display:block;
+		margin:auto;
+		}			
 li.inlink-item p {
 		height:30px;
 		display:block;
@@ -76,7 +85,7 @@ li.inlink-item p {
 #inlink-list {
 		min-height:195px;
 			}
-li.inlink-item#regular {
+li.inlink-item#text {
 		background:url(http://tumblr-in-link.googlecode.com/svn/trunk/img/bgs.png) 0 0 repeat-x;)
 			}
 li.inlink-item#link {
