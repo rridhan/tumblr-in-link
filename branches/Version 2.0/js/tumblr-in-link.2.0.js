@@ -106,7 +106,7 @@
                         else if(post.type=='audio') text+=post['caption'];
                         else if(post.type=='answer') text+=post['question'];
                         /*Strip HTML from text*/
-                        var StrippedText = text.replace(/(<([^>]+)>)"/ig,"");
+                        var StrippedText = text.replace(/(<([^>]+)>)/ig,"");
                         /*slice text to the desired length*/
                         if(StrippedText.length>config.len){ StrippedText=StrippedText.slice(0,config.len); StrippedText+='...';} 
                         /*get images*/
