@@ -135,13 +135,13 @@
         					});
 
         				}
+        				/*Specify default image when undefined*/
         				if(image==0){image=config.imageurl; };
         				if(image=='undefined'){image=config.imageurl; };
-        				
+        				/*Define note for Note Count*/
         				var note ='';
         				note+=post['note_count'];
         				if(note=='undefined'){note='0'; };
-        				
         				images.push(image);
 	                    titles.push(StrippedText);
                         links.push(post['post_url']); 
