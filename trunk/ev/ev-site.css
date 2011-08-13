@@ -10,11 +10,12 @@
 	http://gayspirit.me
 	
 	Beta Release: July 16, 2011
-	Last Revision: July 03, 2011
+	Last Revision: August 13, 2011
 	
 	Change Log:
 	- Added Tabs Features
-	- 15/07/2011 Added XX X Photo Filter	
+	- 15/07/2011 Added XXX Photo Filter
+	- 13/08/2011 Corrected top menu margins
 	=================================================== 
 
 */
@@ -73,31 +74,15 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 #top-menu .pages a {margin-right: 16px; background: rgba(255,255,255,0.05);}
 #top-menu .pages a:hover {background: #ccc; color: #000;}
 #top-menu .pages li {display: block; float: left;}
-#top-menu .pages { float: left; margin: 13px 35px 0 0;}
+#top-menu .pages { float: left; margin: 13px 0;}
 #footer-block a img {display:block; padding-bottom:6px; margin:auto;}
 
 #top-wrapper {height:400px; margin-bottom:10px; display:none;}
 
 /*XXX photo filter*/
 
-.xxx {display: none;}
-.tag_xxx .xxx {display: inline-block;
-width: 90%;
-height: 99%;
-background: #464850;
-filter: alpha(opacity=99);
-opacity: 0.99;
-margin: auto;
-text-align: center;
-vertical-align: middle;
-position: absolute;
-z-index: 4;
-top: 10px;
-right: 40px;
-padding-top:45%;
-}
-
-.tag_xxx .xxx:hover {color: #F55B2C;}
+.XXX {display: none;}
+.tag_xxx .xxx {display: block; width:650px; heigth:95%: background:#333; filter: alpha(opacity=90); opacity: 0.9; margin:auto; text-align:center; vertical-align: middle;}
 
 /*Slider CSS*/
 
