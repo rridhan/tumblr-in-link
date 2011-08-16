@@ -81,7 +81,7 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 
 /*XXX photo filter*/
 
-.XXX {display: none;}
+.xxx {display: none;}
 .tag_xxx .xxx {display: block; width:650px; heigth:95%: background:#333; filter: alpha(opacity=90); opacity: 0.9; margin:auto; text-align:center; vertical-align: middle;}
 
 /*Slider CSS*/
