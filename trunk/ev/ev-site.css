@@ -74,14 +74,14 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 #top-menu .pages a:hover {background: #ccc; color: #000;}
 #top-menu .pages li {display: block; float: left;}
 #top-menu .pages { float: left; margin: 13px 0;}
-#footer-block a img {display:block; padding-bottom:6px; margin:auto;}
-
+#sidebar-block a img {display:block; padding-bottom:6px; margin:auto;}
 #top-wrapper {height:400px; margin-bottom:10px; display:none;}
+.footer-blocks  {width:25%; margin-bottom:10px; float:left;}
 
 /*XXX photo filter*/
 
 .xxx {display: none;}
-.tag_xxx .xxx {display: block; width:650px; heigth:95%: background:#333; filter: alpha(opacity=90); opacity: 0.9; margin:auto; text-align:center; vertical-align: middle;}
+.tag_xxx .xxx {display: block; width:650px; heigth:95%; background:#333; filter: alpha(opacity=90); opacity: 0.9; margin:auto; text-align:center; vertical-align: middle;}
 
 /*Ads*/
  #top_ads {clear:both; width:1042px; border:0; margin:0; padding: 0;}
