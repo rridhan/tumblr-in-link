@@ -87,7 +87,7 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 
 /* Tabs CSS */
 
-.ui-tabs-panel{
+#tabs.ui-tabs-panel{
 -moz-column-count: 5;
 -moz-column-gap: 1.5em;
 -moz-column-rule: none;
@@ -100,6 +100,20 @@ column-gap: 1.5em;
 column-rule: none;
 padding:5px;
 font-size: 88%;
+}
+#tabs-link.ui-tabs-panel{
+-moz-column-count: 2;
+-moz-column-gap: 1.5em;
+-moz-column-rule: none;
+-webkit-column-count: 2;
+-webkit-column-gap: 1.5em;
+-webkit-column-rule: none;
+/* future proof */
+column-count: 2;
+column-gap: 1.5em;
+column-rule: none;
+padding:5px;
+font-size: 82%;
 }
 .tabs-wrapper {
 display:none;
@@ -118,18 +132,18 @@ z-index: 2;
 padding: .5em .5em;
 }
 
-#tabs a {
+#tabs a, #tabs-link a {
 color: black;
 }
 
-#tabs a:hover {
+#tabs a:hover, #tabs-link a:hover {
 color: black;
 text-decoration: underline;
 border-color: #CCC;
 background-color: #EEE;
 }
-via inspector
-#tabs a:visited {
+
+#tabs a:visited, #tabs-link a:visited {
 color: #777;
 }
 
