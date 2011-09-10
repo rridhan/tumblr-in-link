@@ -87,7 +87,7 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 
 /* Tabs CSS */
 
-#tabs.ui-tabs-panel{
+#tabs .ui-tabs-panel{
 -moz-column-count: 5;
 -moz-column-gap: 1.5em;
 -moz-column-rule: none;
@@ -101,7 +101,7 @@ column-rule: none;
 padding:5px;
 font-size: 88%;
 }
-#tabs-link.ui-tabs-panel{
+#tabs-link .ui-tabs-panel{
 -moz-column-count: 2;
 -moz-column-gap: 1.5em;
 -moz-column-rule: none;
