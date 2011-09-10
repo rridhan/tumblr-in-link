@@ -87,7 +87,7 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 
 /* Tabs CSS */
 
-#tabs .ui-tabs-panel{
+.ui-tabs-panel{
 -moz-column-count: 5;
 -moz-column-gap: 1.5em;
 -moz-column-rule: none;
@@ -101,7 +101,7 @@ column-rule: none;
 padding:5px;
 font-size: 88%;
 }
-#tabs-link .ui-tabs-panel{
+#tabs-link-1, #tabs-link-2, #tabs-link-3, #tabs-link-4 {
 -moz-column-count: 2;
 -moz-column-gap: 1.5em;
 -moz-column-rule: none;
@@ -114,6 +114,7 @@ column-gap: 1.5em;
 column-rule: none;
 padding:5px;
 font-size: 82%;
+line-height: 1.2em;
 }
 .tabs-wrapper {
 display:none;
@@ -145,6 +146,10 @@ background-color: #EEE;
 
 #tabs a:visited, #tabs-link a:visited {
 color: #777;
+}
+
+#tabs-link-menu {
+font-size: 88%;
 }
 
 /* Link-In CSS */
