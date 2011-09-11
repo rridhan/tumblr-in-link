@@ -94,9 +94,9 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
  
  
  /*Gallery Pages*/
- #tumblrinlink {width: 650px !important; margin-left: -10px !important;}
-
+ #tumblrinlink {width: 650px !important; margin-left: -10px !important; border: 0 !important;}
  #inlink-list ul li {padding: 4px !important;}
+ #inlink-list li::before {content: none;}
  li.inlink-item {height: 150px !important;}
  li.inlink-item p {padding-top: 1px !important; position: relative !important; height: 40px !important; max-width: 140px !important;}
 
