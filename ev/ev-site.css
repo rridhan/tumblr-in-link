@@ -100,7 +100,7 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
  li.inlink-item p {padding-top: 1px !important; position: relative !important; height: 40px !important; max-width: 140px !important;}
 
  /*Amazon Webstore*/
- .bookstore {margin-left: -110px; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;}
+ .bookstore {margin-left: -110px; margin-right: -100px; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;}
 
 /* Tabs CSS */
 
