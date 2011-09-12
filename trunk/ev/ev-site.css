@@ -78,6 +78,9 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 #top-wrapper {height:400px; margin-bottom:10px; display:none;}
 .footer-blocks  {width:25%; margin-bottom:10px; float:left;}
 
+/*Page Tweak*/
+input[id$="xpm0-hide"] {display: none;}
+
 /*XXX photo filter*/
 
 .xxx {display: none;}
