@@ -10,7 +10,7 @@
 	http://gayspirit.me
 	
 	Beta Release: July 16, 2011
-	Last Revision: September 09, 2011
+	Last Revision: September 12, 2011
 	
 	Change Log:
 	- Added Tabs Features
@@ -85,8 +85,8 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 
 /*Ads*/
  #top_ads {clear:both; width:1042px; border:0; margin:0; padding: 0;}
- #bannerad {width:728px !important; height: 90px ! important; border: 1px solid rgba(255, 255, 255, 0.1);}
- #stripe {float: right; width:300px !important; height: 90px ! important; }
+ #bannerad {width:728px !important; important; border: 1px solid rgba(255, 255, 255, 0.1);}
+ #stripe {float: right; width:300px !important;}
  #topad {width:300px !important; height: 250px ! important; border: 1px solid rgba(255, 255, 255, 0.1);}
  #sidebarad {width:300px !important; min-height: 100px ! important; border: 1px solid rgba(255, 255, 255, 0.1);}
  #smallads {width:300px !important; min-height: 100px ! important; border: 1px solid rgba(255, 255, 255, 0.1);}
