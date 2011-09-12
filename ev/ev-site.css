@@ -96,11 +96,11 @@ input[id$="xpm0-hide"] {display: none ! important;}
  #blogads {width:300px !important; min-height: 100px ! important; border: 1px solid rgba(255, 255, 255, 0.1);}
  
   /*Gallery Pages*/
- #tumblrinlink {width: 680px !important; margin-left: -32px !important; border: 0 !important;}
- #inlink-list ul li {padding: 4px !important;}
- #inlink-list li::before {content: none;}
- li.inlink-item {height: 150px !important;}
- li.inlink-item p {padding-top: 1px !important; position: relative !important; height: 40px !important; max-width: 140px !important;}
+ #post- #tumblrinlink {width: 680px !important; margin-left: -32px !important; border: 0 !important;}
+ #post- #inlink-list ul li {padding: 4px !important;}
+ #post- #inlink-list li::before {content: none;}
+ #post- li.inlink-item {height: 150px !important;}
+ #post- li.inlink-item p {padding-top: 1px !important; position: relative !important; height: 40px !important; max-width: 140px !important;}
 
  /*Amazon Webstore*/
  .bookstore {margin-left: -110px; margin-right: -100px; z-index 4;}
