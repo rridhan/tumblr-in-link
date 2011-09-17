@@ -55,7 +55,6 @@ div { display: block;}
 a {color: #fff; text-decoration: underline;}
 a:hover {text-decoration:underline;}
 h2 { display: block;}
-.banner {margin: 5px 0 10px;}
 .banner div { float:left;}
 #main {margin: auto;width: 1000px;}
 .content-700 #page, .content-700 .inner {width: 1040px;}
