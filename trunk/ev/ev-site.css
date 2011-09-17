@@ -49,6 +49,7 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 /*Customised CSS*/
 
 body {background-color: #464850; color: #8E8F96; font-family: Helvetica, Arial, sans-serif;}
+.pinned .blog-title { display: none;}
 div { display: block;}
 a {color: #fff; text-decoration: underline;}
 a:hover {text-decoration:underline;}
