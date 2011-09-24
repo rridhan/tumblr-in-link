@@ -10,20 +10,21 @@
 	http://gayspirit.me
 	
 	Beta Release: July 16, 2011
-	Last Revision: September 12, 2011
+	Last Revision: September 24, 2011
 	
 	Change Log:
 	- Added Tabs Features
 	- 15/07/2011 Added XXX Photo Filter
 	- 13/08/2011 Corrected top menu margins
 	- 08/09/2011 Advertising Implementation
+	- 24/09/2011 Changed Sidebar H3 color and size
 	=================================================== 
 
 */
 
 /*Default Style CSS*/
 .pinned .menu a { color:#fff; color:rgba(255,255,255,0.8); }
-.pinned .blog-title a, .pinned .menu a:hover, .pinned .pages a, #sidebar .pages a, #top-menu .pages a, .banner .blog-title a, #sidebar .blog-title a, #twitter h3, #sidebar h2, #footer h2, #footer-end a, .more-likes, .like_link a, #pagination .nextprev a, .page-sep { color: #fff; } 
+.pinned .blog-title a, .pinned .menu a:hover, .pinned .pages a, #sidebar .pages a, #top-menu .pages a, .banner .blog-title a, #sidebar .blog-title a, #twitter h3, #sidebar h2, #sidebar h3, #footer h2, #footer-end a, .more-likes, .like_link a, #pagination .nextprev a, .page-sep { color: #fff; } 
 .colored-panel, .type-answer .user-question, .pages a:hover, .invert .fixed .pages a:hover, .invert .pinned .pages a:hover, .invert #sidebar .pages a:hover, .more-likes:hover, .invert-topbar .fixed .pages a:hover, .like_link a:hover, .type-photoset .navi a:hover, #pagination .nextprev a:hover { background-color:#CCC; }
 .corners .tl { border-left-color:#F55B2C; }
 .corners .tr { border-right-color:#F55B2C; }
@@ -78,6 +79,9 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 #sidebar-block a img {display:block; padding-bottom:6px; margin:auto;}
 #top-wrapper {height:400px; margin-bottom:10px; display:none;}
 .footer-blocks  {width:25%; margin-bottom:10px; float:left;}
+#sidebar h2, #footer h2 { font-size: 12px; font-weight: bold; margin-bottom: 8px;
+}
+
 
 /*Page Tweak*/
 input[id$="xpm0-hide"] {display: none ! important;}
