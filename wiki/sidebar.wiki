@@ -6,6 +6,7 @@
     * [CSSEmpty Empty Style]
 
   * [Advanced Advanced Usage]
+    * [inLinkIndependent In-Link Independent: Using In-Link Everywhere]
     * [embeddingTumblrTheme Embedding In-Link into a Tumblr Theme]
 
   * [Options]
