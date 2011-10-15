@@ -83,7 +83,7 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 .tag_editorial .copy p img {width:640px; margin-auto}
 
 /*Blogger Tricks*/
-#blogger {background-image: url(https://cdn.syndtk.net/rx/cdn/bs_seo/images/blogger-icon-mini.gif);}
+.tumblr #blogger {background-image: url(https://cdn.syndtk.net/rx/cdn/bs_seo/images/blogger-icon-mini.gif) ! important;}
 
 /*Page Tweak*/
 input[id$="xpm0-hide"] {display: none ! important;}
