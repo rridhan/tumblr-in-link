@@ -112,7 +112,7 @@ input[id$="xpm0-hide"] {display: none ! important;}
  
   /*Gallery Pages*/
  #post- #tumblrinlink {width: 680px !important; margin-left: -32px !important; border: 0 !important;}
- #post #tumblrinlink h2 { display: block !important; clear: both !important;}
+ #post- #tumblrinlink h2 { display: block !important; clear: both !important;}
  #post- #inlink-list ul li {padding: 4px !important;}
  #post- #inlink-list li::before {content: none;}
  #post- li.inlink-item {height: 150px !important;}
