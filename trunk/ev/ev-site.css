@@ -81,6 +81,7 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 .footer-blocks  {width:25%; margin-bottom:10px; float:left;}
 #sidebar h3, #footer h3 { font-size: 12px; font-weight: bold; margin-bottom: 8px;}
 .tag_editorial .copy p img {width:640px; margin-auto}
+#blogger {background image: url(https://cdn.syndtk.net/rx/cdn/bs_seo/images/blogger-icon-mini.gif);}
 
 /*Page Tweak*/
 input[id$="xpm0-hide"] {display: none ! important;}
