@@ -95,7 +95,7 @@ input[id$="xpm0-hide"] {display: none ! important;}
 
 #gallerylist p {display:block; border: 1px solid rgba(255, 255, 255, 0.1);}
 .breadcrumb {display: inline;}
-li .feat {background: url(http://tumblr-in-link.googlecode.com/svn/trunk/ev/featured.gif) 0 3px no-repeat;
+li.feat {background: url(http://tumblr-in-link.googlecode.com/svn/trunk/ev/featured.gif) 0 3px no-repeat;
 padding-left: 14px;}
 
 /*XXX photo filter*/
