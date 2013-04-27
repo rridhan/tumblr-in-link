@@ -25,8 +25,7 @@
  *
 */
 
-(function($){
-   $(document).ready(function(){
+(function($) {
     var config = new Object();
     var titles = [];
     var links = [];
@@ -203,6 +202,4 @@
         $jo('#tumblrinlink').hide();
 
     }
-
-   });
-})(jQuery);
+})();
