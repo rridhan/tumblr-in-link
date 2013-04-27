@@ -33,7 +33,7 @@
     var notes = [];
     var items = [];
     var types = [];
-    var $j = jQuery.noConflict()
+    var $jo = jQuery.noConflict()
 
     var scripts = document.getElementsByTagName('script');
     var this_script = scripts[scripts.length - 1];
@@ -88,13 +88,13 @@
         
     var tags = config.tags.slice(0,-1).split(',');
 
-    $j(document).ready(function() {
+    $jo(document).ready(function() {
         function getRelated() {
             var req;
             for(var i=0; i<tags.length; i++){
-                req=$j.getJSON('http://api.tumblr.com/v2/blog/'+document.domain+'/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
+                req=$jo.getJSON('http://api.tumblr.com/v2/blog/'+document.domain+'/posts?api_key=VspHunyBAE3ZhmnivmJ7F8AMZX84Ptz96XCHGCdCRyg0DLNKif&limit='+config.num+'&offset=0&type='+config.type+'&tag='+escape(tags[i])+'&jsonp=?', 
                 function(pippo) {
-                    $j(pippo.response.posts).each(function(i, post) {
+                    $jo(pippo.response.posts).each(function(i, post) {
                    		/*Set Text*/
 						var text='';
                         if(post.type=='text') text+=post['title'];
@@ -114,7 +114,7 @@
                         /*If article, try to get the first image out of the body*/
                         if(post.type=='text'){
                         	var fullbody = post.body;
-                        	var fullbodyset = $j(fullbody);
+                        	var fullbodyset = $jo(fullbody);
                          	image += fullbodyset.find('img').attr('src');
                          	}
                         /*If audio, get the album cover if available*/
@@ -123,9 +123,9 @@
                         	}
                         else if(post.type=='photo'){ 
                         	/*Loop to the various photos data, and make sure to select only the first in case of a slideshow*/
-                        	$j(this.photos[0]).each(function(i, photo) {
+                        	$jo(this.photos[0]).each(function(i, photo) {
                         		/*Loop through the various photo size to get the thumbnail information*/
-                        			$j(this.alt_sizes).each(function(i, alt_size) {
+                        			$jo(this.alt_sizes).each(function(i, alt_size) {
                         			if(config.size=='75') {
                         				if(alt_size.width=='75') {image+=alt_size['url'];}
                         				}
@@ -170,19 +170,19 @@
         function getList(){
             for(var i=0; i<titles.length; i++){
                 var regex = new RegExp('('+links[i]+')');
-                var html = $j("#inlink-list").html();
+                var html = $jo("#inlink-list").html();
 				
                 if(links[i]!=document.location&&!html.match(regex)){
                     if(config.num--<=0) return;
                 
                     var item='<li class="inlink-item" id="'+types[i]+'"><div class="shade1"><div class="shade2"><div class="shade3"><div class="clipout"><div class="clipin"><a class="inlink-link" href="'+links[i]+'" title="'+titles[i]+'"><img src="'+images[i]+'" alt="'+titles[i]+'"><div class="notes"></div></div></div></div></div></div><p>'+titles[i]+' <span id="#notes" class="notes" style="display:inline">&hearts;'+notes[i]+'</span></p></a></li>';
-                    $j("#inlink-list").append(item);
+                    $jo("#inlink-list").append(item);
                 }
             }
             if(links.length==0) hideall();
             console.log(links.length);
-            $j("#inlink-title").html('<h2>'+config.title+'</h2>');
-            $j("#inlink-loading").html('');
+            $jo("#inlink-title").html('<h2>'+config.title+'</h2>');
+            $jo("#inlink-loading").html('');
         }
         getRelated();
         
@@ -195,11 +195,11 @@
             case 1: msg+='tumblr API problem'; break;
             case 2: msg+='tumblr problem'; break;
         }
-        $j("#inlink-loading").html(msg);
+        $jo("#inlink-loading").html(msg);
     }
     
         function hideall(){
-        $j('#tumblrinlink').hide();
+        $jo('#tumblrinlink').hide();
 
     }
 })();
