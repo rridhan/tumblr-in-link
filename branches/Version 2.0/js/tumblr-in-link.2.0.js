@@ -25,7 +25,7 @@
  *
 */
 
-(function($) {
+(function() {
     var config = new Object();
     var titles = [];
     var links = [];
