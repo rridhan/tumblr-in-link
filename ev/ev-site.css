@@ -1,7 +1,7 @@
 /*
 	===================================================
 	
-	EcletticheVisioni 3.2 Theme Style CSS
+	EcletticheVisioni 3.4 Theme Style CSS
 	based on the Effector Theme by Carlo Franco
 	
 	http://effectortheme.tumblr.com/documentation
@@ -10,19 +10,22 @@
 	http://gayspirit.me
 	
 	Beta Release: July 16, 2011
-	Last Revision: July 03, 2011
+	Last Revision: September 24, 2011
 	
 	Change Log:
 	- Added Tabs Features
-	- 15/07/2011 Added XX X Photo Filter	
+	- 15/07/2011 Added XXX Photo Filter
+	- 13/08/2011 Corrected top menu margins
+	- 08/09/2011 Advertising Implementation
+	- 24/09/2011 Changed Sidebar H3 color and size
+	- 28/04/2013 Modified for integration with final 
 	=================================================== 
 
 */
 
 /*Default Style CSS*/
-
 .pinned .menu a { color:#fff; color:rgba(255,255,255,0.8); }
-.pinned .blog-title a, .pinned .menu a:hover, .pinned .pages a, #sidebar .pages a, #top-menu .pages a, .banner .blog-title a, #sidebar .blog-title a, #twitter h3, #sidebar h2, #footer h2, #footer-end a, .more-likes, .like_link a, #pagination .nextprev a, .page-sep { color: #fff; } 
+.pinned .blog-title a, .pinned .menu a:hover, .pinned .pages a, #sidebar .pages a, #top-menu .pages a, .banner .blog-title a, #sidebar .blog-title a, #twitter h3, #sidebar h2, #sidebar h3, #footer h2, #footer-end a, .more-likes, .like_link a, #pagination .nextprev a, .page-sep { color: #fff; } 
 .colored-panel, .type-answer .user-question, .pages a:hover, .invert .fixed .pages a:hover, .invert .pinned .pages a:hover, .invert #sidebar .pages a:hover, .more-likes:hover, .invert-topbar .fixed .pages a:hover, .like_link a:hover, .type-photoset .navi a:hover, #pagination .nextprev a:hover { background-color:#CCC; }
 .corners .tl { border-left-color:#F55B2C; }
 .corners .tr { border-right-color:#F55B2C; }
@@ -48,19 +51,19 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 /*Customised CSS*/
 
 body {background-color: #464850; color: #8E8F96; font-family: Helvetica, Arial, sans-serif;}
+.pinned .blog-title { display: none;}
+.content-700 .banner img { max-width: 1040px;}
 div { display: block;}
 a {color: #fff; text-decoration: underline;}
 a:hover {text-decoration:underline;}
 h2 { display: block;}
-.banner {margin: 5px 0 10px;}
 .banner div { float:left;}
 #main {margin: auto;width: 1000px;}
+.content-700 #page, .content-700 .inner {width: 1040px;}
 .content-700 .right-sidebar #content {margin-right: 40px;}
-#sidebar {width: 200px;}
+#sidebar {width: 300px;}
 .post h2 {font-size: 2em; font-weight: bold;}
 .blog-title{color: #8E8F96; font-size: 2em; font-weight: bold;}
- #top_ads {clear:both; width:942px; max-height: 60px !important; overflow:hidden !important;}
- #top_ads ins {clear:both; max-width:468px; overflow:hidden !important;}
 div.current-basic {width: 100%;-webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
@@ -73,163 +76,80 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 #top-menu .pages a {margin-right: 16px; background: rgba(255,255,255,0.05);}
 #top-menu .pages a:hover {background: #ccc; color: #000;}
 #top-menu .pages li {display: block; float: left;}
-#top-menu .pages { float: left; margin: 13px 35px 0 0;}
-#footer-block a img {display:block; padding-bottom:6px; margin:auto;}
-
+#top-menu .pages { float: left; margin: 13px 0;}
+#sidebar-block a img {display:block; padding-bottom:6px; margin:auto;}
 #top-wrapper {height:400px; margin-bottom:10px; display:none;}
+.footer-blocks  {width:25%; margin-bottom:10px; float:left;}
+#sidebar h3, #footer h3 { font-size: 12px; font-weight: bold; margin-bottom: 8px;}
+
+
+/*Page Tweak*/
+input[id$="xpm0-hide"] {display: none ! important;}
+
+#gallerylist p {display:block; border: 1px solid rgba(255, 255, 255, 0.1);}
+.breadcrumb {display: inline;}
 
 /*XXX photo filter*/
 
 .xxx {display: none;}
-.tag_xxx .xxx {display: inline-block;
-width: 90%;
-height: 99%;
-background: #464850;
-filter: alpha(opacity=99);
-opacity: 0.99;
-margin: auto;
-text-align: center;
-vertical-align: middle;
-position: absolute;
-z-index: 4;
-top: 10px;
-right: 40px;
-padding-top:45%;
-}
+.tag_xxx .xxx{display:inline-block;width:90%;height:99%;background:#464850;filter:alpha(opacity=99);opacity:0.99;text-align:center;vertical-align:middle;position:absolute;z-index:4;top:10px;right:40px;padding-top:45%;margin:auto;}
 
-.tag_xxx .xxx:hover {color: #F55B2C;}
+/*Ads*/
+ #top_ads {clear:both; width:1042px; border:0; margin:0; padding: 0;}
+ #bannerad {width:728px !important; important; border: 1px solid rgba(255, 255, 255, 0.1);}
+ #stripe {float: right; width:300px !important;}
+ #topad {width:300px !important; height: 250px ! important; border: 1px solid rgba(255, 255, 255, 0.1);}
+ #sidebarad {width:300px !important; min-height: 100px ! important; border: 1px solid rgba(255, 255, 255, 0.1);}
+ #smallads {width:300px !important; min-height: 100px ! important; border: 1px solid rgba(255, 255, 255, 0.1);}
+ #blogads {width:300px !important; min-height: 100px ! important; border: 1px solid rgba(255, 255, 255, 0.1);}
+ 
+  /*Gallery Pages*/
+ #post- #tumblrinlink {width: 680px !important; margin-left: -32px !important; border: 0 !important;}
+ #post- #inlink-list ul li {padding: 4px !important;}
+ #post- #inlink-list li::before {content: none;}
+ #post- li.inlink-item {height: 150px !important;}
+ #post- li.inlink-item p {padding-top: 1px !important; position: relative !important; height: 40px !important; max-width: 140px !important;}
 
-/*Slider CSS*/
-
-#slider-wrapper { width: 510px !important; height: 400px !important; padding-top:3px; position:relative; float:left;}
-#slider {width: 500px !important; height: 350px !important; margin-left:3px; position:relative;}
-#slider img {
-	position:absolute;
-	top:0px;
-	left:0px;
-	display:none;
-	}
-
-#slider a {
-	border:0;
-	display:block;
-	color:transparent;
-	}
-#slider .nivo-controlNav {
-	position:absolute;
-	bottom:-50px; /* Put the nav below the slider */
-	width: 500px;
-}
-
-#slider .nivo-controlNav a {
-	display:block;
-	float:left;
-	width:40px;
-	height:40px;
-	overflow:hidden;
-	margin-right:10px;
-}
-#slider .nivo-controlNav a:lastchild {
-	margin-right:0;
-}
-
-#slider .nivo-controlNav img {
-	display:inline; /* Unhide the thumbnails */
-	position:relative;
-	left:50%;
-	margin-left:-50%;
-	min-height:70px;
-	min-width:70px;
-}
-
-.nivo-directionNav a {
-height: 99%;
-width: 25%;
-top: 0;
-}
-
-.nivo-prevNav {
-left: 0px;
-background: url('http://static.tumblr.com/jmczp4p/Ngdlhy1t9/fleche1.png') no-repeat center left;
-}
-
-.nivo-nextNav {
-right: 0px;
-background: url('http://static.tumblr.com/jmczp4p/HXOlhy1s9/fleche2.png') no-repeat center right;
-}
-#featured {
-background:url(http://dev7studios.com/demo/skinning-the-nivo-slider/images/featured.png) no-repeat;
-width:115px;
-height:110px;
-position:absolute;
-top:-8px; /* Bump up a bit to give the fold effect */
-left:-8px; /* Bump left a bit to give the fold effect */
-z-index:1000; /* Make sure it is visible above the slides */
-}
-
-/*Accordion CSS*/
-
-#accordion-wrapper { width: 420px !important; height: 400px !important; padding-top:3px; float:right; overflow:hidden;}
-
-.accordionWrapper {
-width: 430px;
-}
-.accordionWrapper div.content {
-width: 430px;
-height: 245px;
-overflow: hidden;
-position:relative;
-}
-.accordionWrapper div.title {
-background: #CCC;
-color: black;
-font-size: 1.2em;
-padding-right: 20px;
-text-align: right;
-}
-.accordionWrapper img {
-vertical-align: top;
-border: 0;
-margin: 0;
-padding: 0;
-max-width:450px;
-}
-.set {
-border-bottom: 1px solid black;
-}
-
-#myDesc {
-width: 80%;
-display: block;
-float: left;
-position: absolute;
-bottom: 15px;
-left: 40px;
-background: hsla(0, 0%, 90%, .65);
-color: black;
-border: dotted 1px black;
-}
-
+ /*Amazon Webstore*/
+ .bookstore {margin-left: -110px; margin-right: -100px; z-index 4;}
+.bookstore iframe {-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; z-index 5; -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);
+-moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);
+box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 /* Tabs CSS */
 
 .ui-tabs-panel{
--moz-column-count: 4;
+-moz-column-count: 5;
 -moz-column-gap: 1.5em;
 -moz-column-rule: none;
--webkit-column-count: 4;
+-webkit-column-count: 5;
 -webkit-column-gap: 1.5em;
 -webkit-column-rule: none;
 /* future proof */
-column-count: 4;
+column-count: 5;
 column-gap: 1.5em;
 column-rule: none;
 padding:5px;
 font-size: 88%;
 }
-.tabs-wrapper {
+#tabs-link-1, #tabs-link-2, #tabs-link-3, #tabs-link-4 {
+-moz-column-count: 2;
+-moz-column-gap: 1.5em;
+-moz-column-rule: none;
+-webkit-column-count: 2;
+-webkit-column-gap: 1.5em;
+-webkit-column-rule: none;
+/* future proof */
+column-count: 2;
+column-gap: 1.5em;
+column-rule: none;
+padding:5px;
+font-size: 82%;
+line-height: 1.2em;
+}
+.evtabs-wrapper {
 display:none;
 }
-.tabs-wrapper .post-shadow {
+.evtabs-wrapper .post-shadow {
 background: url(http://static.tumblr.com/jmczp4p/OTfli5du2/post_shadow.png) left bottom;
 width: 100%;
 height: 10px;
@@ -243,19 +163,23 @@ z-index: 2;
 padding: .5em .5em;
 }
 
-#tabs a {
+#evtabs a, #evtabs-link a {
 color: black;
 }
 
-#tabs a:hover {
+#evtabs a:hover, #evtabs-link a:hover {
 color: black;
 text-decoration: underline;
 border-color: #CCC;
 background-color: #EEE;
 }
-via inspector
-#tabs a:visited {
+
+#evtabs a:visited, #evtabs-link a:visited {
 color: #777;
+}
+
+#evtabs-link-menu {
+font-size: 88%;
 }
 
 /* Link-In CSS */
