@@ -1,7 +1,7 @@
 /*
 	===================================================
 	
-	EcletticheVisioni 3.4 Theme Style CSS
+	EcletticheVisioni 4.0 Theme Style CSS
 	based on the Effector Theme by Carlo Franco
 	
 	http://effectortheme.tumblr.com/documentation
@@ -10,7 +10,7 @@
 	http://gayspirit.me
 	
 	Beta Release: July 16, 2011
-	Last Revision: October 15, 2011
+	Last Revision: September 24, 2011
 	
 	Change Log:
 	- Added Tabs Features
@@ -18,7 +18,8 @@
 	- 13/08/2011 Corrected top menu margins
 	- 08/09/2011 Advertising Implementation
 	- 24/09/2011 Changed Sidebar H3 color and size
-  - 15/10/2011 Added Blogger Tweaks 
+	- 15/10/2011 Added Blogger Tweaks 
+	- 28/04/2013 Modified for integration with final 
 	=================================================== 
 
 */
@@ -90,9 +91,9 @@ padding-left: 23px;
 margin-top: -20px;
 }
 
+
 /*Page Tweak*/
 input[id$="xpm0-hide"] {display: none ! important;}
-
 #gallerylist p {display:block; border: 1px solid rgba(255, 255, 255, 0.1);}
 .breadcrumb {display: inline;}
 li.feat {background: url(http://tumblr-in-link.googlecode.com/svn/trunk/ev/featured.gif) 0 3px no-repeat;
@@ -114,7 +115,6 @@ padding-left: 14px;}
  
   /*Gallery Pages*/
  #post- #tumblrinlink {width: 680px !important; margin-left: -32px !important; border: 0 !important;}
- #post- #tumblrinlink h2 { display: block !important; clear: both !important;}
  #post- #inlink-list ul li {padding: 4px !important;}
  #post- #inlink-list li::before {content: none;}
  #post- li.inlink-item {height: 150px !important;}
@@ -156,10 +156,10 @@ padding:5px;
 font-size: 82%;
 line-height: 1.2em;
 }
-.tabs-wrapper {
+.evtabs-wrapper {
 display:none;
 }
-.tabs-wrapper .post-shadow {
+.evtabs-wrapper .post-shadow {
 background: url(http://static.tumblr.com/jmczp4p/OTfli5du2/post_shadow.png) left bottom;
 width: 100%;
 height: 10px;
@@ -173,22 +173,22 @@ z-index: 2;
 padding: .5em .5em;
 }
 
-#tabs a, #tabs-link a {
+#evtabs a, #evtabs-link a {
 color: black;
 }
 
-#tabs a:hover, #tabs-link a:hover {
+#evtabs a:hover, #evtabs-link a:hover {
 color: black;
 text-decoration: underline;
 border-color: #CCC;
 background-color: #EEE;
 }
 
-#tabs a:visited, #tabs-link a:visited {
+#evtabs a:visited, #evtabs-link a:visited {
 color: #777;
 }
 
-#tabs-link-menu {
+#evtabs-link-menu {
 font-size: 88%;
 }
 
