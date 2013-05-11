@@ -33,8 +33,8 @@
 .corners .bl, .corners .br { border-bottom-color:#F55B2C; }
 a, #footer-end a:hover { color:#F55B2C; }
 a:hover { color:#FFFFFF; }
-.copy a, .header_text a, .copy li:before, .type-chat .speaker, #notes-toggle:hover, ol.notes a, #relposts ul a, #disqus a, .qtcontent a { color:#000; }
-.copy .header_text .post-title a:hover, .copy a:hover, ol.notes a:hover, #dsq-comments a:hover, #dsq-options a:hover, .qtcontent a:hover {background-color: #eee;}
+.copy a, .copy li:before, .type-chat .speaker, #notes-toggle:hover, ol.notes a, #relposts ul a, #disqus a, .qtcontent a { color:#000; }
+.copy .post-title a:hover, .copy a:hover, ol.notes a:hover, #dsq-comments a:hover, #dsq-options a:hover, .qtcontent a:hover {background-color: #eee;}
 .copy a:hover, .header_text a:hover, ol.notes a:hover, #relposts ul a:hover { border-color:#ccc; }
 #notes-toggle:hover .icon, .photo-btns a:hover { background-color:#F55B2C; }
 .colored-panel, .colored-panel a, .colored-panel a:hover, .colored-panel .user-question, .pages a:hover, .invert-topbar .fixed .pages a:hover, .invert #sidebar .pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover { color:#000; }
@@ -85,11 +85,11 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 .tag_editorial .copy p img {width:640px; margin-auto}
 
 /*Page Headers Modification*/
-.page_header {position: relative;
+.page-header {position: relative;
 margin-bottom: 50px;
 word-wrap: break-word}
 
-.header_panel{
+.header-panel{
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
