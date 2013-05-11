@@ -1,7 +1,7 @@
 /*
 	===================================================
 	
-	EcletticheVisioni 4,0 Theme Style CSS
+	EcletticheVisioni 4.1 Theme Style CSS
 	based on the Effector Theme by Carlo Franco
 	
 	http://effectortheme.tumblr.com/documentation
@@ -10,7 +10,7 @@
 	http://gayspirit.me
 	
 	Beta Release: July 16, 2011
-	Last Revision: September 24, 2011
+	Last Revision: May 11, 2013
 	
 	Change Log:
 	- Added Tabs Features
@@ -20,6 +20,7 @@
 	- 24/09/2011 Changed Sidebar H3 color and size
 	- 15/10/2011 Added Blogger Tweaks 
 	- 28/04/2013 Modified for integration with final 
+	- 11/05/2013 Added Header Styles
 	=================================================== 
 
 */
@@ -27,20 +28,7 @@
 /*Default Style CSS*/
 .pinned .menu a { color:#fff; color:rgba(255,255,255,0.8); }
 .pinned .blog-title a, .pinned .menu a:hover, .pinned .pages a, #sidebar .pages a, #top-menu .pages a, .banner .blog-title a, #sidebar .blog-title a, #twitter h3, #sidebar h2, #sidebar h3, #footer h2, #footer-end a, .more-likes, .like_link a, #pagination .nextprev a, .page-sep { color: #fff; } 
-.colored-panel, .type-answer .user-question, .pages a:hover, .invert .fixed .pages a:hover, .invert .pinned .pages a:hover, .invert #sidebar .pages a:hover, .more-likes:hover, .invert-topbar .fixed .pages a:hover, .like_link a:hover, .type-photoset .navi a:hover, #pagination .nextprev a:hover { background-color:#CCC; }
-.corners .tl { border-left-color:#F55B2C; }
-.corners .tr { border-right-color:#F55B2C; }
-.corners .bl, .corners .br { border-bottom-color:#F55B2C; }
-a, #footer-end a:hover { color:#F55B2C; }
-a:hover { color:#FFFFFF; }
-.copy a, .copy li:before, .type-chat .speaker, #notes-toggle:hover, ol.notes a, #relposts ul a, #disqus a, .qtcontent a { color:#000; }
-.copy .post-title a:hover, .copy a:hover, ol.notes a:hover, #dsq-comments a:hover, #dsq-options a:hover, .qtcontent a:hover {background-color: #eee;}
-.copy a:hover, .header_text a:hover, ol.notes a:hover, #relposts ul a:hover { border-color:#ccc; }
-#notes-toggle:hover .icon, .photo-btns a:hover { background-color:#F55B2C; }
-.colored-panel, .colored-panel a, .colored-panel a:hover, .colored-panel .user-question, .pages a:hover, .invert-topbar .fixed .pages a:hover, .invert #sidebar .pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover { color:#000; }
 .type-quote .quote-text,.type-audio .audio-meta,.type-answer .user-question,.pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover { text-shadow:1px 1px #bbb; }
-ol.notes li.tumblelog_{PlaintextName} { background-color:#fbfbfb; }
-ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 #page, .inner { margin:0 auto; } 
 #footer-end .gslogo { float: left; padding-right: 10px; margin-top: -5px; }
 .copy p img:last-child[align=right] {margin: 0 0 20px 20px;}
@@ -84,6 +72,55 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 #sidebar h3, #footer h3 { font-size: 12px; font-weight: bold; margin-bottom: 8px;}
 .tag_editorial .copy p img {width:640px; margin-auto}
 
+a {color: #fff; text-decoration: underline;}
+.tab {
+		-moz-column-count: 2;
+		-moz-column-gap: 1.5em;
+		-moz-column-rule: none;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 1.5em;
+		-webkit-column-rule: none;
+		/* future proof */
+		column-count: 2;
+		column-gap: 1.5em;
+		column-rule: none;
+		padding:5px;
+		font-size: 82%;
+		line-height: 1.2em;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-top:0px;
+		}
+		
+#tabs-nav h2 {
+		font-size: 90%;
+		line-height: 1.2em;
+		}
+		
+.likes {
+		float: left;
+		margin-left: -60px;
+		margin-top: 5px;
+		margin-bottom: -95px;
+		}
+		
+.pins {
+		padding-top: 15px;
+		overflow: auto;
+		float: left;
+		margin-bottom: -99px;
+		}
+				
+.fb-like span {
+		overflow:visible !important;
+		width:450px !important;
+		z-index:300;
+		}
+.round-corners .type-photo .post-panel {
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		}
+
 /*Page Headers Modification*/
 .page-header {position: relative;
 margin-bottom: 50px;
@@ -98,6 +135,10 @@ background: rgb(255, 255, 255);
 -moz-box-shadow: 0 0 0 4px rgba(0,0,0,0.03) inset,0 0 0 1px rgba(0,0,0,0.15);
 box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset,0 0 0 1px rgba(0, 0, 0, 0.15);
 position: relative}
+
+.header-panel .copy {
+padding-bottom: 15px;
+}
 
 .header-shadow {
 background: url(http://static.tumblr.com/njty47g/yu0leufgq/post_shadow.png) left top no-repeat;
