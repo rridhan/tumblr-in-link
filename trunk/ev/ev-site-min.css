@@ -136,7 +136,6 @@ background-size: 52px 29px!important;
 
 .tumblr-like{
 		margin-top: 65px;
-		margin-bottom: 20px;
 		}
 
 #tumblr-like-count {
@@ -155,8 +154,12 @@ text-align:	center !important;
 
 .like_button{
 		margin-top: 5px;
+		margin-left:10px;
 		}
-		
+
+.tumblr-reblog{
+		margin-left: 10px;
+		}		
 		
 .round-corners .type-photo .post-panel {
 		-webkit-border-radius: 5px;
