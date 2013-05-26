@@ -21,6 +21,7 @@
 	- 15/10/2011 Added Blogger Tweaks 
 	- 28/04/2013 Modified for integration with final 
 	- 11/05/2013 Added Header Styles
+	- 22/05/2013 Added Reblog style and amazon style
 	=================================================== 
 
 */
@@ -112,10 +113,7 @@ display: block;
 display: block !important;
 }
 
-.pins {
-		padding-top: 15px;
-		overflow: auto;
-		float: left;
+.pins { padding-top: 15px;
 		}
 		
 .pins a {
@@ -273,6 +271,9 @@ padding-left: 14px;}
 .bookstore iframe {-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; z-index 5; -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);
 -moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);
 box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
+
+#amazon-links { padding-left: 50px; margin-top: 10px; margin-bottom: 20px; }
+#amazon-links h2 { font-size: 20px; padding-bottom: 20px; margin-left: -20px; }
 /* Tabs CSS */
 
 .ui-tabs-panel{
