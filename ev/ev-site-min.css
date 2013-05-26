@@ -122,6 +122,13 @@ box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2),inset 0 1px 3px rgba(0, 0, 0, 0.5
   border: 0!important;
 }
 
+.gsc-control-cse.gsc-control-cse-en {
+background: rgba(0, 0, 0, 0)!important;
+border: 0!important;
+padding-top: 0!important;
+padding-bottom: 0!important;
+}
+
 a {color: #fff; text-decoration: underline;}
 .tab {
 		-moz-column-count: 2;
