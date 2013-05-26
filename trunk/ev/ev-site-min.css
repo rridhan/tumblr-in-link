@@ -79,12 +79,12 @@ box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0, 0, 0, 0.15);}
 /*Search Styling*/
 .gsc-search-button { display: none;}
 .gsc-input-box {
-border: 0px!important;
+border: 0!important;
 margin: 0!important;
-background: none;
+background: none!important;
 }
 
-.gsc-input input {
+input.gsc-input {
 color: rgb(153, 153, 153)!important;
 font-family: Arial,Helvetica Neue,sans-serif;
 font-size: 12px!important;
