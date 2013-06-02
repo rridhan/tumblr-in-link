@@ -74,9 +74,10 @@ $(function () {
                 T.css("top", X);
                 g.css("top", (X - 40)).fadeTo(200, 1);
                 f.css("top", (X - 30))
+                evImg.css("height", U);
             }
             if (evXX < U) {
-				evXXb = (evXX / 100) * 60;
+				evXXb = (evXX / 100) * 80;
                 evImg.css("height", evXXb);
             }
             P.each(function () {
@@ -105,7 +106,7 @@ $(function () {
                                     var aj = $(this).find(".exif");
                                     var af = aj.find("ul");
                                     var ah = (aj.width() / 2);
-                                    var ag = ((aj.height() - af.height()) / 3);
+                                    var ag = ((aj.height() - af.height()) / 2);
                                     af.css("width", ah).css("margin-top", ag)
                                 }
                             })
