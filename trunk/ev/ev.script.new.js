@@ -96,7 +96,7 @@ $(function () {
                     var cc = $(this);
                     if (ad.hasClass("type-photo") || ad.hasClass("type-photoset")) {
                         ad.imagesLoaded(function () {
-                                var ai = ad.find("figure").eq(1).width();
+                                var ai = ad.find("img").eq(0).width();
                                 ad.find("footer:not(.processed)").css("width", ai).show().addClass("processed");
                                 cc.find("div.titolo a").css("width", ai);
                                 if (ad.hasClass("type-photo")) {
