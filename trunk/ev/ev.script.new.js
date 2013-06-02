@@ -141,7 +141,7 @@ $(function () {
             }
             var evX = (M - evAX) / 3; // Assegna 100px all'header, dividi il resto dello schermo in terzi.
             var evXX = (evX * 2); // Assegna due terzi all'area immagini
-            var Z = (evXX - U) / 3;
+            var Z = (evXX - U) / 4;
             D.css("margin-top", Z).fadeTo(200, 1)
         }
 
