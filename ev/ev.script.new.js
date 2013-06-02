@@ -100,7 +100,7 @@ $(function () {
                                     var aj = $(this).find(".exif");
                                     var af = aj.find("ul");
                                     var ah = (aj.width() / 2);
-                                    var ag = ((aj.height() - af.height()) / 2);
+                                    var ag = ((aj.height() - af.height()) / 3);
                                     af.css("width", ah).css("margin-top", ag)
                                 }
                             })
@@ -153,7 +153,7 @@ $(function () {
                         var ad = $(this).find(".exif");
                         var aa = ad.find("ul");
                         var ac = (ad.width() / 2);
-                        var ab = ((ad.height() - aa.height()) / 2);
+                        var ab = ((ad.height() - aa.height()) / 3);
                         aa.css("width", ac).css("margin-top", ab)
                     })
             }
@@ -288,7 +288,7 @@ $(function () {
                                     var av = $(this).find(".exif");
                                     var ar = av.find("ul");
                                     var au = (av.width() / 2);
-                                    var at = ((av.height() - ar.height()) / 2);
+                                    var at = ((av.height() - ar.height()) / 3);
                                     ar.css("width", au).css("margin-top", at)
                                 })
                         })
