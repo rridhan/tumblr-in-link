@@ -58,12 +58,12 @@ $(function () {
             I.css("height", M);            
             var evX = (M - evAX) / 3; // Assegna 100px all'header, dividi il resto dello schermo in terzi.
             var evXX = (evX * 2); // Assegna due terzi all'area immagini
-            A.css("height", (evXX - evAX)); 
-        	A.css("top", evAX); 
-            d.css("height", evXX);
+            A.css("height", evXX); 
+        	d.css("height", M);
             c.css("height", evXX);
             evA.css("height", evAX);
             evB.css("height", evXX); // Assegna due terzi all'area immagini
+            evB.css("top", evAX); 
             evC.css("height", evX); // Assegna un terzo al piè di pagina.
             if (c.hasClass("index-view") && I.hasClass("index-page")) {
                 d.css("top", M)
