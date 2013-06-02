@@ -94,18 +94,25 @@ $(function () {
             Y.each(function () {
                     var ad = $(this);
                     var cc = $(this);
-                    if (ad.hasClass("type-photo") || ad.hasClass("type-photoset")) {
+                    if (ad.hasClass("type-photo")) {
                         ad.imagesLoaded(function () {
                                 var ai = ad.find("img").eq(0).width();
                                 ad.find("footer:not(.processed)").css("width", ai).show().addClass("processed");
                                 cc.find("div.titolo a").css("width", ai);
-                                if (ad.hasClass("type-photo")) {
+                                if (ad.hasClass("type-photo")) { 
                                     var aj = $(this).find(".exif");
                                     var af = aj.find("ul");
                                     var ah = (aj.width() / 2);
                                     var ag = ((aj.height() - af.height()) / 2);
                                     af.css("width", ah).css("margin-top", ag)
                                 }
+                            })
+                    }
+                    if (ad.hasClass("type-photoset")) {
+                        ad.imagesLoaded(function () {
+                                var ai = ad.find("figure").eq(0).width();
+                                ad.find("footer:not(.processed)").css("width", ai).show().addClass("processed");
+                                cc.find("div.titolo a").css("width", ai)
                             })
                     }
                     if (ad.hasClass("type-video")) {
