@@ -28,6 +28,7 @@ $(function () {
             evAX = 100,
             evB = $("#principale"),
             evC = $("#basepagina"),
+            evImg = A.find("img").not(".permalinkpage"),
             H = navigator.userAgent.match(/iPad/i) != null,
             i = (bok.o.twitterID.length > 0);
 
@@ -68,11 +69,15 @@ $(function () {
                 d.css("top", M)
             }
             var X = (evXX - U) / 2;
-            if (evXX > 500) {
+            if (evXX > U) {
                 R.css("top", X).fadeTo(200, 1);
                 T.css("top", X);
                 g.css("top", (X - 40)).fadeTo(200, 1);
                 f.css("top", (X - 30))
+            }
+            if (evXX < U) {
+				evXXb = (evXX / 100) * 60;
+                evImg.css("height", evXXb);
             }
             P.each(function () {
                     var Y = $(this);
