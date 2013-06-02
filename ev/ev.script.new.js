@@ -93,6 +93,7 @@ $(function () {
         function N(X, Y, aa) {
             Y.each(function () {
                     var ad = $(this);
+                    var cc = $(this);
                     if (ad.hasClass("type-photo") || ad.hasClass("type-photoset")) {
                         ad.imagesLoaded(function () {
                                 var ai = ad.find("figure").eq(0).width();
