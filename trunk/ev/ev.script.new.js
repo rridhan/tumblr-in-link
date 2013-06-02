@@ -265,6 +265,10 @@ $(function () {
             if (am.length > 0) {
                 t = true;
                 c.removeClass("index-view").addClass("permalink-view").addClass("is-scrolling");
+                evA.css("height", 0);
+            	evB.css("height", M); // Assegna due terzi all'area immagini
+            	evB.css("top", 0); 
+            	evC.css("height", 0); // Assegna un terzo al piè di pagina.
                 var ae = am.attr("data-postType"),
                     Z = am.attr("data-reblog").split("/").pop(),
                     ag = am.html(),
