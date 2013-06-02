@@ -80,7 +80,7 @@ $(function () {
                             var aa = Y.outerHeight(),
                                 ac = Y.find(".section-wrap"),
                                 ab = ac.outerHeight(),
-                                Z = (aa - ab) / 3;
+                                Z = (aa - ab) / 2;
                             if (Z > 0) {
                                 ac.css("margin-top", Z)
                             }
@@ -138,6 +138,8 @@ $(function () {
             if (E) {
                 insertShareButtons($("#content"))
             }
+            var evX = (M - evAX) / 3; // Assegna 100px all'header, dividi il resto dello schermo in terzi.
+            var evXX = (evX * 2); // Assegna due terzi all'area immagini
             var Z = (evXX - U) / 2;
             D.css("margin-top", Z).fadeTo(200, 1)
         }
@@ -153,7 +155,7 @@ $(function () {
                         var ad = $(this).find(".exif");
                         var aa = ad.find("ul");
                         var ac = (ad.width() / 2);
-                        var ab = ((ad.height() - aa.height()) / 3);
+                        var ab = ((ad.height() - aa.height()) / 2);
                         aa.css("width", ac).css("margin-top", ab)
                     })
             }
@@ -288,7 +290,7 @@ $(function () {
                                     var av = $(this).find(".exif");
                                     var ar = av.find("ul");
                                     var au = (av.width() / 2);
-                                    var at = ((av.height() - ar.height()) / 3);
+                                    var at = ((av.height() - ar.height()) / 2);
                                     ar.css("width", au).css("margin-top", at)
                                 })
                         })
