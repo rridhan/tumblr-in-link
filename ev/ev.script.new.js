@@ -138,7 +138,7 @@ $(function () {
             if (E) {
                 insertShareButtons($("#content"))
             }
-            var Z = (M - U) / 2;
+            var Z = (evXX - U) / 2;
             D.css("margin-top", Z).fadeTo(200, 1)
         }
 
