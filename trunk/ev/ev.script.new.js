@@ -74,11 +74,6 @@ $(function () {
                 T.css("top", X);
                 g.css("top", (X - 40)).fadeTo(200, 1);
                 f.css("top", (X - 30))
-                evImg.css("height", U);
-            }
-            if (evXX < U) {
-				evXXb = (evXX / 100) * 80;
-                evImg.css("height", evXXb);
             }
             P.each(function () {
                     var Y = $(this);
