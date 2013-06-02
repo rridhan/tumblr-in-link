@@ -66,8 +66,8 @@ $(function () {
             if (c.hasClass("index-view") && I.hasClass("index-page")) {
                 d.css("top", M)
             }
-            var X = (M - U) / 2;
-            if (M > 500) {
+            var X = (evXX - U) / 2;
+            if (evXX > 500) {
                 R.css("top", X).fadeTo(200, 1);
                 T.css("top", X);
                 g.css("top", (X - 40)).fadeTo(200, 1);
