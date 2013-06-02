@@ -58,7 +58,7 @@ $(function () {
             I.css("height", M);            
             var evX = (M - evAX) / 3; // Assegna 100px all'header, dividi il resto dello schermo in terzi.
             var evXX = (evX * 2); // Assegna due terzi all'area immagini
-            A.css("height", evXX); 
+            A.css("height", (evXX - evAX)); 
         	A.css("top", evAX); 
             d.css("height", evXX);
             c.css("height", evXX);
