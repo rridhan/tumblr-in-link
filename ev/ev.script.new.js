@@ -97,6 +97,7 @@ $(function () {
                         ad.imagesLoaded(function () {
                                 var ai = ad.find("figure").eq(0).width();
                                 ad.find("footer:not(.processed)").css("width", ai).show().addClass("processed");
+                                cc.find("div.titolo").css("width", ai);
                                 if (ad.hasClass("type-photo")) {
                                     var aj = $(this).find(".exif");
                                     var af = aj.find("ul");
@@ -129,6 +130,7 @@ $(function () {
                             ad.find("figure").data("embed-code", ab);
                             var ac = ad.find("figure").eq(0).width();
                             ad.find("footer:not(.processed)").css("width", ac).show().addClass("processed")
+                            
                         }
                     }
                     insertShareButtons(ad)
