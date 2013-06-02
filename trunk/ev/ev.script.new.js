@@ -282,10 +282,7 @@ $(function () {
                 ah.find("footer").removeAttr("style");
                 var aj = ah.find(".notes-container");
                 var aa = aj.data("notes-url");
-                evA.css("height", 0).fadeTo(200, 1);
-            	evB.css("height", M).fadeTo(200, 1); // Assegna tutta la pagina
-            	evB.css("top", 0); 
-            	evC.css("height", evX).fadeTo(200, 1); // Assegna un terzo al piè di pagina.
+
                 $.ajax({
                         url: aa,
                         success: function (ar) {
