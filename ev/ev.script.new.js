@@ -58,6 +58,7 @@ $(function () {
             var evX = (M - evAX) / 3; // Assegna 100px all'header, dividi il resto dello schermo in terzi.
             var evXX = (evX * 2); // Assegna due terzi all'area immagini
             A.css("height", evXX); 
+        	A.css("top", evAX); 
             d.css("height", evXX);
             c.css("height", evXX);
             evA.css("height", evAX);
@@ -79,7 +80,7 @@ $(function () {
                             var aa = Y.outerHeight(),
                                 ac = Y.find(".section-wrap"),
                                 ab = ac.outerHeight(),
-                                Z = (aa - ab) / 2;
+                                Z = (aa - ab) / 3;
                             if (Z > 0) {
                                 ac.css("margin-top", Z)
                             }
