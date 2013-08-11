@@ -325,9 +325,6 @@ li a:hover {
 /*FIGURES*/
 
 
-section { position: relative; }
-
-article { position: relative; }
 
 @media(-webkit-min-device-pixel-ratio: 2, min-width: 768px) {
     #element {
