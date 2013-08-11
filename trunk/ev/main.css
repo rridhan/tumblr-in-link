@@ -97,7 +97,7 @@ body { text-rendering: optimizeLegibility; }
 
 @media and (max-device-width : 480px) {
 body { text-rendering: optimizeSpeed; }
-}
+}}
 
 
 /*BASICS - reset types*/
