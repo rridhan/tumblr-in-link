@@ -93,13 +93,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-
-
-
-
-
-
+div#framer { position: relative; }
+div#framer iframe { width: 100%; }
+div#framer a { position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
 
 
 
