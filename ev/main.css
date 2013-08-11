@@ -95,9 +95,7 @@ textarea {
 
 body { text-rendering: optimizeLegibility; }
 
-@media and (max-device-width : 480px) {
-body { text-rendering: optimizeSpeed; }
-}}
+
 
 
 /*BASICS - reset types*/
@@ -441,6 +439,10 @@ div#framer a { position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+}
+
+@media and (max-device-width : 480px) {
+body { text-rendering: optimizeSpeed; }
 }
 
 @media print,
