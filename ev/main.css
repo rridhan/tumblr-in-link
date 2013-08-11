@@ -92,6 +92,38 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+.video embed,
+.video object,
+.video iframe {
+	width: 100%;
+	height: auto;
+}
+
+section { position: relative; }
+
+article { position: relative; }
+
+@media(-webkit-min-device-pixel-ratio: 2, min-width: 768px) {
+    #element {
+        background-image('image-2x.png');
+    }
+}
+
+
+
+
+
+
 
 div#framer { position: relative; }
 div#framer iframe { width: 100%; }
